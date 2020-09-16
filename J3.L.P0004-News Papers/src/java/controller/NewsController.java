@@ -75,7 +75,7 @@ public class NewsController extends HttpServlet {
             request.setAttribute("currentNews", currentNews);
             request.getRequestDispatcher("view/home.jsp").forward(request, response);
         } catch (Exception ex) {
-            request.getRequestDispatcher("view/error.jsp").forward(request, response);
+            request.getRequestDispatcher("common/error.jsp").forward(request, response);
         }
     }
 

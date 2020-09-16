@@ -73,6 +73,6 @@ SELECT * FROM dbo.News
 WHERE id = 1
 
 SELECT * FROM dbo.News 
-WHERE title LIKE '%a%'
-OR content LIKE '%a%'
+WHERE title LIKE '%6%'
+OR content LIKE '%6%'
 ORDER BY id DESC

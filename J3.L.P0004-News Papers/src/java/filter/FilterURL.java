@@ -37,9 +37,9 @@ public class FilterURL implements Filter {
 
         if (checkURL(servletRequest, url) || url.equals(servletRequest.getContextPath() + "/") ) {
             chain.doFilter(servletRequest, servletResponse);
-//            request.getRequestDispatcher("view/error.jsp").forward(request, response);
+//            request.getRequestDispatcher("common/error.jsp").forward(request, response);
         } else {
-            request.getRequestDispatcher("view/error.jsp").forward(request, response);
+            request.getRequestDispatcher("common/error.jsp").forward(request, response);
         }
     }
 

@@ -75,7 +75,7 @@ public class SearchController extends HttpServlet {
 
             request.getRequestDispatcher("view/search.jsp").forward(request, response);
         } catch (Exception ex) {
-            request.getRequestDispatcher("view/error.jsp").forward(request, response);
+            request.getRequestDispatcher("common/error.jsp").forward(request, response);
         }
 
     }
