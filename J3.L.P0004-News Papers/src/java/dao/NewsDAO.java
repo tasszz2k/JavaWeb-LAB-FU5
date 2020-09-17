@@ -93,12 +93,4 @@ public class NewsDAO extends DBContext {
         }
         return results;
     }
-
-    public static void main(String[] args) {
-        NewsDAO db = new NewsDAO();
-        List<NewsModel> l = db.search("6");
-        for (NewsModel newsModel : l) {
-            System.out.println(newsModel);
-        }
-    }
 }

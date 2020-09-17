@@ -20,7 +20,7 @@ import model.NewsModel;
  *
  * @author TASS
  */
-@WebServlet(name = "HomeController", urlPatterns = {"/home-page"})
+@WebServlet(name = "HomeController", urlPatterns = {"/home-page", "/view"})
 public class HomeController extends HttpServlet {
 
     /**
@@ -62,16 +62,25 @@ public class HomeController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+            String url = request.getRequestURI();
             NewsDAO newsDAO = new NewsDAO();
             List<NewsModel> listRecentNews = newsDAO.getRecentNews(5);
             NewsModel mostRecentNews = listRecentNews.get(0);
-            NewsModel currentNews = listRecentNews.get(0);
+            NewsModel currentNews = null;
+
+            if (url.startsWith(request.getContextPath() + "/home-page")) {
+                currentNews = listRecentNews.get(0);
+            } else if (url.startsWith(request.getContextPath() + "/view")) {
+                int id = Integer.parseInt(request.getParameter("id"));
+                currentNews = newsDAO.findById(id);
+            }
 
             request.setAttribute("listRecentNews", listRecentNews);
             request.setAttribute("mostRecentNews", mostRecentNews);
             request.setAttribute("currentNews", currentNews);
             request.getRequestDispatcher("view/home.jsp").forward(request, response);
-        }catch(Exception ex){
+
+        } catch (Exception ex) {
             request.getRequestDispatcher("common/error.jsp").forward(request, response);
         }
 

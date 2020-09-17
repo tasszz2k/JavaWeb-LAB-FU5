@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home Page</title>
+        <title>Digital News</title>
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/template/css/style.css" />
     </head>
     <body>
@@ -29,7 +29,7 @@
                                 <img src="${pageContext.request.contextPath}/template/images/comment.gif"/>
                                 <img src="${pageContext.request.contextPath}/template/images/timeicon.gif"/>
                                 By Writer ${currentNews.writer} | Date 
-                            <fmt:formatDate pattern="MMMM dd yyy '-' HH:mmaaa" value = "${currentNews.date}" />
+                            <fmt:formatDate pattern="MMM dd yyy '-' HH:mmaa" value = "${currentNews.date}" />
                             </p>
                         </div>
                         <%@include file="/common/aside.jsp" %>
