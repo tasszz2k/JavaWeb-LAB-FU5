@@ -41,8 +41,19 @@
                                         <hr/>
                                     </div>
                                 </a>
-
                             </c:forEach>
+                            <!--Paging-->
+                            <div class="flex">
+                                <c:forEach var="page" begin="1" end="${totalPages}">
+                                    
+                                    <c:if test="${currentPage == page}">
+                                        <p class="page-current">${page}</p>
+                                    </c:if>
+                                    <c:if test="${currentPage != page}">
+                                        <a href="search?currentPage=${page}&keyword=${keyword}" class="mx-2">${page}</a>
+                                    </c:if>
+                                </c:forEach>
+                            </div>
                         </div>
                         <%@include file="/common/aside.jsp" %>
                     </div>

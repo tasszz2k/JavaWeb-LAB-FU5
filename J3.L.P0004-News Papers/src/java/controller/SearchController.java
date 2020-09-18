@@ -62,16 +62,33 @@ public class SearchController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+            //
+            final int maxPageItems = 4;
+  
+            int currentPage = 1;
+            try{
+            currentPage = Integer.parseInt(request.getParameter("currentPage"));
+            }catch(NumberFormatException ex){}
+            
             String keyword = request.getParameter("keyword");
             NewsDAO newsDAO = new NewsDAO();
             List<NewsModel> listRecentNews = newsDAO.getRecentNews(5);
             NewsModel mostRecentNews = listRecentNews.get(0);
-            List<NewsModel> listResults = newsDAO.search(keyword);
 
+            //Paging
+            int totalItems = newsDAO.getTotalResulSearched(keyword);
+            int offset = (currentPage-1)*maxPageItems;
+            int limit = maxPageItems;
+            int totalPages = (int) Math.ceil((double) totalItems / maxPageItems);
+            
+            List<NewsModel> listResults = newsDAO.search(keyword, offset, limit);
+            //
             request.setAttribute("listRecentNews", listRecentNews);
             request.setAttribute("mostRecentNews", mostRecentNews);
             request.setAttribute("listResults", listResults);
             request.setAttribute("keyword", keyword);
+            request.setAttribute("currentPage", currentPage);
+            request.setAttribute("totalPages", totalPages);
 
             request.getRequestDispatcher("view/search.jsp").forward(request, response);
         } catch (Exception ex) {

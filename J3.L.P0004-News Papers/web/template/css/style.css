@@ -173,3 +173,10 @@ body{
 .news-search:active {
     text-decoration: underline;
 }
+
+/*paging*/
+.page-current{
+    color: red;
+    font-weight: bold;
+    margin-top: 0;
+}
