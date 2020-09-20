@@ -73,6 +73,9 @@ public class HomeController extends HttpServlet {
             } else if (url.startsWith(request.getContextPath() + "/view")) {
                 int id = Integer.parseInt(request.getParameter("id"));
                 currentNews = newsDAO.findById(id);
+                if (currentNews == null) {
+                    throw new Exception();
+                }
             }
 
             request.setAttribute("listRecentNews", listRecentNews);

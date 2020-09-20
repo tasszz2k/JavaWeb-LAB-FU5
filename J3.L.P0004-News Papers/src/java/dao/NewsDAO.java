@@ -57,7 +57,8 @@ public class NewsDAO extends DBContext {
                 model.setContent(rs.getString(3));
                 model.setDate(rs.getTimestamp(4));
                 model.setWriter(rs.getString(5));
-
+            } else {
+                return null;
             }
         } catch (SQLException ex) {
             Logger.getLogger(NewsDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -93,7 +94,7 @@ public class NewsDAO extends DBContext {
                 //query  like OFFSET-LIMIT(from SQLServer2012)
                 //get rows from row (offset + +1) to ((offset +1)+(limit-1))
                 statement.setInt(3, offSet + 1);
-                statement.setInt(4, (offSet + 1) + (limit - 1)); 
+                statement.setInt(4, (offSet + 1) + (limit - 1));
             }
             ResultSet rs = statement.executeQuery();
             while (rs.next()) {
