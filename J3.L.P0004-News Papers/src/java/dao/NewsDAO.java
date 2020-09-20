@@ -69,14 +69,18 @@ public class NewsDAO extends DBContext {
 
     public List<NewsModel> search(String keyword, int offSet, int limit) {
         List<NewsModel> results = new ArrayList<>();
-        String sql = "SELECT * FROM dbo.News \n"
+        String sql = "SELECT *\n"
+                + "FROM\n"
+                + "(\n"
+                + "SELECT *,\n"
+                + "ROW_NUMBER() OVER (ORDER BY date) AS \"ROW_NUM\"\n"
+                + "FROM dbo.News\n"
                 + "WHERE title LIKE ?\n"
-                + "OR content LIKE ?\n"
-                + "ORDER BY id DESC";
+                + "OR content LIKE ?"
+                + ") AS \"DataSearch\"\n";
         //paging
         if (offSet >= 0 && limit >= 0) {
-            sql += " OFFSET ? ROWS\n"
-                    + "FETCH NEXT ? ROWS ONLY";
+            sql += " WHERE \"ROW_NUM\" BETWEEN ? AND ?";
         }
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -86,8 +90,10 @@ public class NewsDAO extends DBContext {
             statement.setString(2, keyword);
             //paging
             if (offSet >= 0 && limit >= 0) {
-                statement.setInt(3, offSet);
-                statement.setInt(4, limit);
+                //query  like OFFSET-LIMIT(from SQLServer2012)
+                //get rows from row (offset + +1) to ((offset +1)+(limit-1))
+                statement.setInt(3, offSet + 1);
+                statement.setInt(4, (offSet + 1) + (limit - 1)); 
             }
             ResultSet rs = statement.executeQuery();
             while (rs.next()) {

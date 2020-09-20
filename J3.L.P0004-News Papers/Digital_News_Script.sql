@@ -73,6 +73,24 @@ SELECT * FROM dbo.News
 WHERE id = 1
 
 SELECT * FROM dbo.News 
-WHERE title LIKE '%6%'
-OR content LIKE '%6%'
+WHERE title LIKE '%%'
+OR content LIKE '%%'
 ORDER BY id DESC
+OFFSET 0 ROWS
+FETCH NEXT 3 ROWS ONLY
+
+SELECT * FROM dbo.News 
+WHERE title LIKE '%%'
+OR content LIKE '%%'
+ORDER BY id DESC
+OFFSET 0 ROWS
+FETCH NEXT 3 ROWS ONLY
+
+SELECT *
+FROM
+(
+SELECT *,
+ROW_NUMBER() OVER (ORDER BY date) AS "ROW_NUM"
+FROM dbo.News
+) AS "DataSearch"
+WHERE "ROW_NUM" BETWEEN 2 AND (5-1)

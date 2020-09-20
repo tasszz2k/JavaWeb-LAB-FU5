@@ -63,7 +63,7 @@ public class SearchController extends HttpServlet {
             throws ServletException, IOException {
         try {
             //
-            final int maxPageItems = 4;
+            final int maxPageItems = 3;
   
             int currentPage = 1;
             try{
