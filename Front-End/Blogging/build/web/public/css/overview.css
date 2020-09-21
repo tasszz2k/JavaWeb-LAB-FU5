@@ -1,0 +1,17 @@
+.overview-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    border-top: 1px solid #c7c7c7;
+}
+
+.overview-item__link {
+    max-width: 250px;
+}
+
+.overview-item__link a {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
