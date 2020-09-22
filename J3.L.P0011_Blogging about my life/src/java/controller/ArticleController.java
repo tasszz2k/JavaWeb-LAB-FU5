@@ -73,12 +73,16 @@ public class ArticleController extends HttpServlet {
             } else if (url.startsWith(request.getContextPath() + "/detail")) {
                 int id = Integer.parseInt(request.getParameter("id"));
                 article = articleDAO.findById(id);
-                view = "view/detail.jsp";
+                if (article != null) {
+                    view = "view/detail.jsp";
+                } else {
+                    throw new Exception();
+                }
             }
             request.setAttribute("article", article);
             request.getRequestDispatcher(view).forward(request, response);
         } catch (Exception ex) {
-            System.out.println(ex.toString());
+            request.getRequestDispatcher("common/error.jsp").forward(request, response);
         }
     }
 

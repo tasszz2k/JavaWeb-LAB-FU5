@@ -27,8 +27,10 @@
                     <div class="blog-display">
                         <h2>Overview - My Blog</h2>
                         <div class="overview-item">
-                            <c:set var = "now" value = "<% = new java.util.Date()%>" />
-                            <fmt:formatDate pattern = "M yyyy" value = "${now}" />
+                            
+                            <jsp:useBean id="now" class="java.util.Date" />
+                            <fmt:formatDate pattern = "MMMM yyyy" value = "${now}" />
+                            
                             <p>Date</p>
                         </div>
                         <c:forEach items="${listArticles}" var="article">
@@ -37,7 +39,7 @@
                                     <a href="${ctx}/detail?id=${article.id}">${article.title}</a>
                                 </div>
                                 <div class="overview-item__published">
-                                     <fmt:formatDate pattern = "dd-mm-yyyy" value = "${article.published}" />
+                                     <fmt:formatDate pattern = "dd-MM-yyyy" value = "${article.published}" />
                                 </div>
                             </div>
                         </c:forEach>     

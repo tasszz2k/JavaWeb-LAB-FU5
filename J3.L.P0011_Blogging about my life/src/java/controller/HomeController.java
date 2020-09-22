@@ -20,7 +20,7 @@ import model.ArticleModel;
  *
  * @author TASS
  */
-@WebServlet(name = "HomeController", urlPatterns = {"/home","/overview"})
+@WebServlet(name = "HomeController", urlPatterns = {"/home", "/overview"})
 public class HomeController extends HttpServlet {
 
     /**
@@ -77,6 +77,7 @@ public class HomeController extends HttpServlet {
 
             request.getRequestDispatcher(view).forward(request, response);
         } catch (Exception ex) {
+            request.getRequestDispatcher("common/error.jsp").forward(request, response);
         }
     }
 

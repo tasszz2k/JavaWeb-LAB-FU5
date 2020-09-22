@@ -1,6 +1,6 @@
 <%-- 
-    Document   : error
-    Created on : Sep 15, 2020, 11:11:04 PM
+    Document   : about
+    Created on : Sep 17, 2020, 10:13:07 PM
     Author     : ViruSs0209
 --%>
 
@@ -12,28 +12,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link href="${ctx}/template/css/index.css" type="text/css" rel="stylesheet"/>
-        <link href="${ctx}/template/css/home.css" type="text/css" rel="stylesheet"/>
+        <link href="${ctx}/template/css/index.css" rel="stylesheet" type="text/css"/>
+        <link href="${ctx}/template/css/home.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div id="wrap-all">
             <%@include file="/common/header.jsp" %>
             <main>
-                <div class="page-content">
-                    <div class="content-wrapper">
-                        <div class="article-display">
-                            <c:if test="${error != null}">
-                                <h1 style="margin-bottom: 20px;">${error}</h1>
-                            </c:if>
-                            <c:if test="${error == null}">
-                                <h1 style="margin-bottom: 20px;">Not Found</h1>
-                            </c:if>
-                            <a href="${ctx}/home">Back to home</a>
-                        </div>
-                    </div>
+                <h1 style="color: red;">Not found!</h1>         
+                    <%--<%@include file="/common/aside.jsp" %>--%>
                 </div>
-                <footer></footer>
-            </main>         
+                <hr/>
+                <footer>
+                    
+                </footer>
+            </main>          
         </div>
     </body>
-</html>
+</html> 
