@@ -68,13 +68,15 @@ public class HomeController extends HttpServlet {
             ArticleDAO articleDAO = new ArticleDAO();
             List<ArticleModel> listArticles = articleDAO.getAll();
             request.setAttribute("listArticles", listArticles);
+            int pageCounter = articleDAO.getPageCounter();
+            request.setAttribute("pageCounter", pageCounter);
 
             if (url.startsWith(request.getContextPath() + "/home")) {
                 view = "view/home.jsp";
             } else if (url.startsWith(request.getContextPath() + "/overview")) {
                 view = "view/overview.jsp";
             }
-
+            
             request.getRequestDispatcher(view).forward(request, response);
         } catch (Exception ex) {
             request.getRequestDispatcher("common/error.jsp").forward(request, response);

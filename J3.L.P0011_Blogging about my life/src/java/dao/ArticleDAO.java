@@ -83,4 +83,32 @@ public class ArticleDAO extends DBContext {
         }
         return null;
     }
+
+    public void updatePageCounter() {
+        String sql = "UPDATE dbo.counter \n"
+                + "SET pageCounter = pageCounter + 1\n"
+                + "WHERE id =1 ";
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(ArticleDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public int getPageCounter() {
+     
+        String sql = "SELECT pageCounter FROM dbo.counter";
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ArticleDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+    }
 }

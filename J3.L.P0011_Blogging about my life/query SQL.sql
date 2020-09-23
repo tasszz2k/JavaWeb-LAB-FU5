@@ -19,6 +19,11 @@ CREATE TABLE [article](
 [categoryid] INT NOT NULL FOREIGN KEY REFERENCES dbo.category(id)
 )
 
+CREATE TABLE [counter](
+[id] INT  IDENTITY(1,1) PRIMARY KEY,
+[pageCounter] INT
+)
+
 /*INSERT*/
 INSERT INTO dbo.category(name)
 VALUES('aboutme')
@@ -65,6 +70,10 @@ INSERT INTO dbo.article
 VALUES
 ('Photo', '', GETDATE(), 'AAA', 'i1.jpg', 4)
 
+INSERT INTO dbo.counter
+(pageCounter)
+VALUES
+(0)
 /*SELECT*/
 
 SELECT * FROM dbo.category
@@ -72,3 +81,8 @@ SELECT article.id,title,content,published,author,banner,categoryid,name
 FROM dbo.article
 INNER JOIN dbo.category ON article.categoryid = category.id
 WHERE categoryid != 1
+
+SELECT pageCounter FROM dbo.counter
+UPDATE dbo.counter 
+SET pageCounter = 43248
+WHERE id =1 

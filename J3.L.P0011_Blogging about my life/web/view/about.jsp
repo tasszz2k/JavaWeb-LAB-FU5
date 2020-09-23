@@ -25,7 +25,7 @@
                         <p>
                             ${article.content}
                         </p>
-                        
+
                         <div class="signature" style="margin: 30px 0px;">
                             <p>King regards</p>
                             <div class="signature-sign" style="margin-top: 15px; font-family: 'Pacifico',serif; font-size: 40px;font-weight: bold;">
@@ -37,7 +37,7 @@
                 </div>
                 <hr/>
                 <footer>
-                    
+                    <%@include file="/common/footer.jsp" %>
                 </footer>
             </main>          
         </div>

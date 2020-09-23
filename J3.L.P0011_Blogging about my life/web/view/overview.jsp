@@ -48,7 +48,7 @@
                 </div>
                 <hr/>
                 <footer>
-                    
+                    <%@include file="/common/footer.jsp" %>
                 </footer>
             </main>          
         </div>

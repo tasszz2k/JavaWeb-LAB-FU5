@@ -175,10 +175,10 @@ hr {
 }
 
 footer {
-    display: flex;
+    /*display: flex;*/
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0px;
+    margin: 15px 15px;
 }
 
 .pages a{
