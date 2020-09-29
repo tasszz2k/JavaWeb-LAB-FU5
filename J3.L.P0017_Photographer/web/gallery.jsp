@@ -54,18 +54,6 @@ these make the slideshow work
                 opacity: 1;
                 z-index: 2;
             }
-            /*
-            non-essential styles:
-            just for appearance; change whatever you want
-            */
-
-            /*            .slide {
-                            font-size: 40px;
-                            padding: 40px;
-                            box-sizing: border-box;
-                            background: #333;
-                            color: #fff;
-                        }*/
         </style>
         <!--End slide CSS-->
 
@@ -107,7 +95,8 @@ these make the slideshow work
                                                             <c:if test="${index ne 1}">
                                                             <li class="slide">
                                                             </c:if>
-                                                            <img style="width:100%; height:425px;" src="${ctx}/template/${photo.image}">
+                                                            <a rel="nofollow" data-ss="imagemodal" data-href="${ctx}/template/${photo.image}">
+                                                                    <img style="width:100%; height:425px;" src="${ctx}/template/${photo.image}"></a>
                                                         </li>
                                                         <c:set var="index" value="${index + 1}"/>
                                                     </c:forEach>     
