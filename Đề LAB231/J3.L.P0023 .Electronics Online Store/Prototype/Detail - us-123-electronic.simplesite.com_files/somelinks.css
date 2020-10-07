@@ -1,0 +1,167 @@
+.social-media-links {
+  display: flex;
+}
+.social-media-links.display-contact-information .phone-email {
+  width: 50%;
+  padding: 7px 0px;
+  padding-left: 2em;
+}
+.social-media-links.display-contact-information .header-icons {
+  width: 50%;
+}
+.social-media-links .header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 7px 0px;
+  width: 100%;
+}
+.social-media-links .header-icons:not(:last-child) {
+  padding-right: 20px;
+}
+.social-media-links .social-media-decoration {
+  text-decoration: none !important;
+}
+@media screen and (min-width: 724px) {
+  .social-media-links .social-media-links-container {
+    justify-content: left !important;
+  }
+}
+.social-media-links .social-media-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-media-links .social-media-icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  border-radius: 60px;
+  padding: 0.3em 0.3em;
+}
+.social-media-links .social-media-icon-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.social-media-links .headerSpace {
+  width: 32px;
+}
+.social-media-links .social-media-icons-design-one .facebook-icon-background {
+  color: white;
+  background-color: #3b5998;
+}
+.social-media-links .social-media-icons-design-one .twitter-icon-background {
+  color: white;
+  background-color: #00aced;
+}
+.social-media-links .social-media-icons-design-one .instagram-icon-background {
+  color: white;
+  background-image: radial-gradient(circle at 0 0, #f5ec53, #e48244 24%, #d15767 40%, #c84278 49%, #192cfa);
+}
+.social-media-links .social-media-icons-design-one .youtube-icon-background {
+  color: white;
+  background-color: #c3271a;
+}
+.social-media-links .social-media-icons-design-one .pinterest-icon-background {
+  color: white;
+  background-color: #c3271a;
+}
+.social-media-links .social-media-icons-design-one .linkedin-icon-background {
+  color: white;
+  background-color: #117bb8;
+}
+.social-media-links .social-media-icons-design-one .envelope-icon-background {
+  color: white;
+  background-color: #b6b6b6;
+}
+.social-media-links .social-media-icons-design-two .facebook-icon-background {
+  color: #3b5998;
+  background-color: white;
+  border: 1px solid #3b5998;
+}
+.social-media-links .social-media-icons-design-two .twitter-icon-background {
+  color: #00aced;
+  background-color: white;
+  border: 1px solid #00aced;
+}
+.social-media-links .social-media-icons-design-two .instagram-icon-background-header:before {
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 50%;
+}
+.social-media-links .social-media-icons-design-two .instagram-icon-background-header {
+  background-color: white;
+  font-size: 18px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  border-color: #d6249f;
+}
+.social-media-links .social-media-icons-design-two .instagram-icon-background-footer:before {
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.social-media-links .social-media-icons-design-two .instagram-icon-background-footer {
+  background-color: white;
+  font-size: 18px;
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  border-image-slice: 1;
+}
+.social-media-links .social-media-icons-design-two .youtube-icon-background {
+  color: #c3271a;
+  background-color: white;
+  border: 1px solid #c3271a;
+}
+.social-media-links .social-media-icons-design-two .pinterest-icon-background {
+  color: #c3271a;
+  background-color: white;
+  border: 1px solid #c3271a;
+}
+.social-media-links .social-media-icons-design-two .linkedin-icon-background {
+  color: #117bb8;
+  background-color: white;
+  border: 1px solid #117bb8;
+}
+.social-media-links .social-media-icons-design-two .envelope-icon-background {
+  color: #b6b6b6;
+  background-color: white;
+  border: 1px solid #b6b6b6;
+}
+.social-media-links .social-media-icons-design-three .facebook-icon-background,
+.social-media-links .social-media-icons-design-three .twitter-icon-background,
+.social-media-links .social-media-icons-design-three .instagram-icon-background,
+.social-media-links .social-media-icons-design-three .youtube-icon-background,
+.social-media-links .social-media-icons-design-three .pinterest-icon-background,
+.social-media-links .social-media-icons-design-three .linkedin-icon-background,
+.social-media-links .social-media-icons-design-three .envelope-icon-background {
+  color: #cdcdcd;
+  background-color: white;
+  border: 1px solid #cdcdcd;
+}
+.social-media-links .social-media-icons-design-four .facebook-icon-background,
+.social-media-links .social-media-icons-design-four .twitter-icon-background,
+.social-media-links .social-media-icons-design-four .instagram-icon-background,
+.social-media-links .social-media-icons-design-four .youtube-icon-background,
+.social-media-links .social-media-icons-design-four .pinterest-icon-background,
+.social-media-links .social-media-icons-design-four .linkedin-icon-background,
+.social-media-links .social-media-icons-design-four .envelope-icon-background {
+  color: white;
+  background-color: #1b1b1b;
+  border: 1px solid #1b1b1b;
+}

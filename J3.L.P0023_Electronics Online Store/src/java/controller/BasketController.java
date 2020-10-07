@@ -5,6 +5,7 @@
  */
 package controller;
 
+import dao.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,6 +13,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.OrderModel;
+import model.ProductModel;
 
 /**
  *
@@ -37,7 +41,7 @@ public class BasketController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet BasketController</title>");            
+            out.println("<title>Servlet BasketController</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet BasketController at " + request.getContextPath() + "</h1>");
@@ -58,12 +62,37 @@ public class BasketController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       try {
-           
-            request.getRequestDispatcher("basket.jsp").forward(request, response);
+//       try {
+        HttpSession session = request.getSession(false);
+        OrderModel order;
+        int productId = -1;
+        try {
+            productId = Integer.parseInt(request.getParameter("productId"));
         } catch (Exception ex) {
             //
         }
+        if (productId != -1) {
+            ProductDAO productDAO = new ProductDAO();
+            ProductModel product = productDAO.findById(productId);
+
+            if (session.getAttribute("order") == null) {
+                order = new OrderModel();
+            } else {
+                order = (OrderModel) session.getAttribute("order");
+            }
+            order.addOrderProduct(product);
+            session.setAttribute("order", order);
+            
+            //back to previous page
+            String referer = request.getHeader("Referer");
+            response.sendRedirect(referer);
+            return;
+        }
+
+        request.getRequestDispatcher("basket.jsp").forward(request, response);
+//        } catch (Exception ex) {
+//            //
+//        }
     }
 
     /**

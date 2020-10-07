@@ -37,161 +37,42 @@
                                 <div class="content">
                                     <div class="section">
                                         <div class="content">
-                                            <div class="row-fluid">
+                                            
+                                            <c:forEach var="product" items="${listProducts}">
+                                                 <div class="row-fluid">
                                                 <div class="span12">
                                                     <div class="product">
                                                         <div class="product-image">
-                                                            <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799399/television?catid=582778">
+                                                            <a rel="nofollow" href="detail?id=${product.id}">
                                                                 <div class="images-inner">
-                                                                    <img class="" src="${ctx}/template/i285978589337768905._rsw480h480_szw480h480_.jpg">
+                                                                    <img class="" src="${ctx}/template/${product.image}">
                                                                 </div>
                                                             </a>
                                                             <h4 class="product-title">
-                                                                <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799399/television?catid=582778">Television</a>
+                                                                <a rel="nofollow" href="detail?id=${product.id}">${product.name}</a>
                                                             </h4>
 
 
                                                             <div class="product-price">
-                                                                Price: 260.00 USD
+                                                                Price: ${product.price} USD
                                                             </div>
                                                             <div class="product-button">
-                                                                <button name="product" data-product_id="1799399" data-hassizes="False" class="btn " type="button">
-                                                                    Add to basket
+                                                                <button name="product" data-product_id="1799399" data-hassizes="False" class="btn " type="button"
+                                                                        onclick="location.href='basket?productId=${product.id}'">
+                                                                   Add to basket
                                                                 </button>
 
                                                             </div>
                                                             <div class="product-description">
-                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+                                                               ${product.description}
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                 </div>
                                             </div>
-                                            <div class="row-fluid">
-                                                <div class="span12">
-                                                    <div class="product">
-                                                        <div class="product-image">
-                                                            <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799411/gps?catid=582778">
-                                                                <div class="images-inner">
-                                                                    <img class="" src="${ctx}/template/i285978589337768969._rsw480h480_szw480h480_.jpg">
-                                                                </div>
-                                                            </a>
-                                                            <h4 class="product-title">
-                                                                <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799411/gps?catid=582778">GPS</a>
-                                                            </h4>
-
-
-                                                            <div class="product-price">
-                                                                Price: 180.00 USD
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <button name="product" data-product_id="1799411" data-hassizes="False" class="btn " type="button">
-                                                                    Add to basket
-                                                                </button>
-
-                                                            </div>
-                                                            <div class="product-description">
-                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="row-fluid">
-                                                <div class="span12">
-                                                    <div class="product">
-                                                        <div class="product-image">
-                                                            <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799387/headphones?catid=582778">
-                                                                <div class="images-inner">
-                                                                    <img class="" src="${ctx}/template/i285978589337768340._rsw480h480_szw480h480_.jpg">
-                                                                </div>
-                                                            </a>
-                                                            <h4 class="product-title">
-                                                                <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799387/headphones?catid=582778">Headphones</a>
-                                                            </h4>
-
-
-                                                            <div class="product-price">
-                                                                Price: 60.00 USD
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <button name="product" data-product_id="1799387" data-hassizes="False" class="btn " type="button">
-                                                                    Add to basket
-                                                                </button>
-
-                                                            </div>
-                                                            <div class="product-description">
-                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="row-fluid">
-                                                <div class="span12">
-                                                    <div class="product">
-                                                        <div class="product-image">
-                                                            <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799422/notebook?catid=582778">
-                                                                <div class="images-inner">
-                                                                    <img class="" src="${ctx}/template/i285978589337769103._rsw480h480_szw480h480_.jpg">
-                                                                </div>
-                                                            </a>
-                                                            <h4 class="product-title">
-                                                                <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799422/notebook?catid=582778">Notebook</a>
-                                                            </h4>
-
-
-                                                            <div class="product-price">
-                                                                Price: 325.00 USD
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <button name="product" data-product_id="1799422" data-hassizes="False" class="btn " type="button">
-                                                                    Add to basket
-                                                                </button>
-
-                                                            </div>
-                                                            <div class="product-description">
-                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="row-fluid">
-                                                <div class="span12">
-                                                    <div class="product">
-                                                        <div class="product-image">
-                                                            <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799428/smartphone-charger?catid=582778">
-                                                                <div class="images-inner">
-                                                                    <img class="" src="${ctx}/template/i285978589337769145._rsw480h480_szw480h480_.jpg">
-                                                                </div>
-                                                            </a>
-                                                            <h4 class="product-title">
-                                                                <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/product/1799428/smartphone-charger?catid=582778">Smartphone charger</a>
-                                                            </h4>
-
-
-                                                            <div class="product-price">
-                                                                Price: 25.00 USD
-                                                            </div>
-                                                            <div class="product-button">
-                                                                <button name="product" data-product_id="1799428" data-hassizes="False" class="btn " type="button">
-                                                                    Add to basket
-                                                                </button>
-
-                                                            </div>
-                                                            <div class="product-description">
-                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
+                                            </c:forEach>
+                                            
                                         </div>
                                     </div>
                                 </div>

@@ -1,0 +1,1571 @@
+﻿/* Hero Section Start */
+
+.hero-section {
+    height: auto;
+    margin: 0 auto;
+}
+
+.hero-section .hero-content {
+    min-height: 440px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-section .hero-content-inner {
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+
+.hero-section .hero-content-inner h2 {
+    font-size: 36px;
+    line-height: 42px;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.5px;
+    padding-top: 28px;
+    padding-bottom: 4px;
+}
+
+.hero-section .hero-content-inner h3 {
+    font-size: 36px;
+    line-height: 42px;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.5px;
+    padding: 15px;
+    margin-bottom: 0px !important;
+}
+
+.hero-section .hero-content-inner p {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section .hero-btn, .hero-section .hero-btn:hover {
+    width: unset;
+    display: inline-block;
+    padding: 0;
+    min-width: 140px;
+    height: 40px;
+    line-height: 40px;
+    border: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.hero-section .hero-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-size: cover;
+    z-index: 1;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .hero-noimage {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+    background-color: rgba(0,0,0,.2);
+    z-index: 2;
+}
+.hero-section.banner .hero-content-inner {
+    width: 343px;
+    margin: auto;
+}
+
+.hero-section.banner.layout2 .hero-content-inner {
+    width: 500px;
+    margin: auto;
+    padding: 0;
+}
+
+.hero-section.banner .hero-content-inner h3 {
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 500;
+    padding: 15px 0;
+    letter-spacing: normal;
+    text-shadow: none;
+}
+
+.hero-section.banner .hero-content-inner p {
+    font-size: 15px;
+    line-height: 140%;
+    text-shadow: none;
+}
+
+.hero-section.banner .hero-btn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    height: 36px;
+    text-transform: none;
+    border-radius: 4px;
+    border: 2px solid #FFFFFF;
+    transition: none;
+    padding: 9px 32px;
+    letter-spacing: 0.5px;
+}
+
+.hero-section.banner.layout2 .hero-content {
+    flex-direction: row;
+}
+
+.hero-image-overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.hero-image-layout2 {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+}
+
+.hero-section.banner.layout2 .hero-content-inner-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+@media screen and (max-width: 724px) {
+    .hero-section.banner.layout2 .hero-content-inner {
+        padding: 20px;
+    }
+
+    .hero-section.banner.layout2 .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-section.banner .hero-content-inner {
+        width: auto;
+    }
+}
+/* Hero Section End */
+
+/* Divider Section V2 Start */
+
+.dividerv2-section hr {
+    border-top-width: 1px;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+}
+
+.row-fluid .sections-wrapper .span12 {
+    min-height: unset;
+}
+
+.row-fluid .sections-wrapper .span9 {
+    min-height: unset;
+}
+
+.row-fluid .sections-wrapper .span6 {
+    min-height: unset;
+}
+
+.row-fluid .sections-wrapper .span4 {
+    min-height: unset;
+}
+
+/* Divider Section V2 End */
+
+/* Carousel / Slideshow Section Start */
+.slider-wrapper {
+    display: none;
+}
+
+    .slider-wrapper > div {
+        position: relative;
+        width: 700px;
+        height: 465px;
+        top: 0;
+        left: 0;
+    }
+
+    .slider-wrapper .slides-container {
+        position: absolute;
+        width: 700px;
+        height: 465px;
+        cursor: move;
+        left: 0;
+        top: 0;
+    }
+
+/*Arrows*/
+.slideshow__arrow {
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 36px;
+    cursor: pointer;
+    overflow: hidden;
+    top: 225px;
+}
+
+/*Arrow right*/
+.slideshow__arrow--right {
+    background: url("/c/css/jssorSlider/images/icon-right.svg") right center no-repeat;
+    right: 10px;
+}
+
+/*Arrow left*/
+.slideshow__arrow--left {
+    background: url("/c/css/jssorSlider/images/icon-left.svg") right center no-repeat;
+    left: 10px;
+}
+
+/*Slideshow Textpanel (for title and description*/
+.slideshow__textpanel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    background-color: rgba(0,0,0,.5);
+    width: 96%;
+    text-align: left;
+    padding: 2%;
+}
+
+/*Slide title*/
+.slideshow__caption {
+    color: white;
+    margin: 0;
+    line-height: 22px !important;
+}
+
+p.slideshow__caption {
+    font-size: 18px !important;
+
+}
+
+.slideshow__caption--title {
+    font-weight: bold;
+    font-size: 22px !important;
+}
+
+/* Special styling for photo album slideshow */
+.slideshow .slideshow__caption {
+    font-size: 18px!important;
+    line-height: 22px!important;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+/*.slideshow .slideshow__textpanel {
+    width: 668px;
+}*/
+/* End of special styling for album*/
+
+/* Carousel / Slideshow Section End */
+
+/* Map Section Start */
+
+.map-container .google-map {
+    width: 100%;
+    height: 376px;
+}
+
+/* Map Section End */
+
+/* Layout 4 Modal Menu */
+
+#burgerModal .icon-remove {
+    color: #000000;
+}
+
+/* Layout 4 Modal Menu End */
+
+/* Html Slideshow Start */
+
+.slideshow-music .sm2-360ui {
+    width: 40px;
+    height: 40px;
+}
+
+.slideshow-music .sm2-canvas, .slideshow-music .sm2-timing  {
+    display: none;
+}
+
+.slideshow-music .sm2-360btn {
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    background: none;   
+    font-size: 35px;
+    color: white;
+    padding: 10px; 
+}
+
+.slideshow-music .sm2-360btn:hover {
+    background: none;   
+}
+
+.slideshow-music .sm2-360ui.sm2_paused .sm2-360btn:hover, .slideshow-music .sm2-360ui.sm2_paused .sm2-360btn {
+    background: none;   
+}
+
+.slideshow-music .sm2-360ui.sm2_paused .sm2-360btn:before {
+    content:"\f3b9";
+}
+
+.slideshow-music .sm2-360ui.sm2_playing .sm2-360btn:hover {
+    background: none;   
+}
+
+.slideshow-music .sm2-360ui.sm2_playing .sm2-360btn:before {
+    content: "\f3ba";
+}
+
+.slideshow-music .sm2-360btn:before {
+    content:"\f3b9";
+}
+
+.slideshow-music .sm2-playing .sm2-360btn
+{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.slideshow-music:hover, .ui360:hover .sm2-360btn {
+    background: none;   
+}
+
+.slideshow-music {
+    background: none;   
+    width: 40px;
+    height: 40px;
+    margin-top: -65px;
+    position: relative;
+    float: right;
+}
+/* Html Slideshow End */
+
+/* Layout 5 Grid */
+
+/*body.layout5 .span3 .hero-btn {
+    min-width: 0;
+}
+
+body.layout5 .section .content {
+    padding: 0;
+}*/
+
+@media screen and (min-width: 724px) {
+    /*body.layout5 .wrapper .content .row-fluid [class*=span] {
+        margin-left: 0;
+    }
+
+    body.layout5 .wrapper .content .row-fluid .span3 {
+        width: 24.999553%;
+    }
+
+    body.layout5 .wrapper .content .row-fluid .span4 {
+        width: 33.331894%;
+    }
+
+    body.layout5 .wrapper .content .row-fluid .span6 {
+        width: 50%;
+    }*/
+
+    .col-centered {
+        display: inline-block !important;
+        float: none !important;
+        vertical-align: middle;        
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
+}
+
+/*@media screen and (min-width: 724px) {
+    body.layout5 .section.margins-on {
+        padding: 20px 20px 20px 0;
+    }
+}*/
+
+/*@media screen and (max-width: 724px) {
+    body.layout5 .section.margins-on {
+        padding: 20px 20px 0 0;
+    }
+
+    body.layout5 .first .section.margins-on {
+        padding: 0 20px 0 0;
+    }
+
+    body.layout5 .container>.layout5-row>.span4>.first>.margins-on:first-child {
+        padding-top: 0;
+    }
+
+    body.layout5 .container > .layout5-row > .span4 > .last > .margins-on:first-child {
+        padding-bottom: 0;
+    }
+}*/
+
+/*@media screen and (min-width: 724px) {
+    body.layout5 .layout5-row.padding-all .first .margins-on {
+        padding-left: 20px;
+    }
+}*/
+
+/*@media screen and (max-width: 724px) {
+    body.layout5 .layout5-row.padding-all .margins-on {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}*/
+
+/*@media screen and (min-width: 724px) {
+    body.layout5 .layout5-row.padding-leftright:first-child {
+        padding-left: 20px;
+    }
+}*/
+
+/*@media screen and (max-width: 724px) {
+    body.layout5 .layout5-row.padding-leftright:first-child {
+        padding-left: 0;
+    }
+}*/
+
+/*@media screen and (min-width: 724px) {
+    body.layout5 .layout5-row.padding-leftright:last-child {
+        padding-right: 20px;
+    }
+}*/
+
+/*@media screen and (max-width: 724px) {
+    body.layout5 .layout5-row.padding-leftright:last-child {
+        padding-right: 0;
+    }
+}*/
+
+/*body.layout5 .outer-margin-on {
+    margin: 0px;
+}
+
+body.layout5 .outer-margin-on.first {
+    margin-left:0;
+}
+
+body.layout5 .outer-margin-on.last {
+    margin-right:0;
+}*/
+
+/*@media screen and (min-width: 724px) {
+    body.layout5 .outer-margin-between {
+        margin-right: 20px;
+    }
+
+    body.layout5 .outer-margin-between.last {
+        margin-right: 0px;
+    }
+}*/
+
+/*@media screen and (max-width: 724px) {
+    body.layout5 .padding-between > .span4,
+    body.layout5 .padding-between > .span6,
+    body.layout5 .padding-between > .span12 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    body.layout5 .padding-between > .span4:first-child,
+    body.layout5 .padding-between > .span6:first-child,
+    body.layout5 .padding-between > .span12:first-child {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+
+    body.layout5 .padding-between > .span4:last-child,
+    body.layout5 .padding-between > .span6:last-child,
+    body.layout5 .padding-between > .span12:last-child {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+
+}*/
+
+/*body.layout5 .row-fluid.margins-topbottom {
+    margin: 20px 0px;
+}*/
+
+/* justifies the last row of the collage gallery*/ 
+.photo-album-collage .thumbnails {
+  text-align-last: justify;
+  -ms-column-count: 3;
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}
+
+/* End Layout5 Grid */
+
+/* LY1: stefan-asafti Rows Grid */
+
+/*body.stefan-asafti .span3 .hero-btn {
+    min-width: 0px;
+}*/
+
+/*body.stefan-asafti .section .content {
+    padding: 0px;
+}*/
+
+/*@media screen and (min-width: 724px) {*/
+    /* when there is NO container class applied, we have to have margin left of 20px */
+/*    body.stefan-asafti .section.margins-on {
+        padding: 20px 20px 20px 20px;
+    }*/
+    /* where there is container class applied we have to have the maring left 0px */
+/*    body.stefan-asafti .container .layout5-row.padding-all .section.margins-on {
+        padding: 20px 20px 20px 0px;
+    }
+}*/
+
+/*body.stefan-asafti .container .layout5-row.padding-all .last .margins-on {
+    padding-right: 0px;
+}*/
+
+/*body.stefan-asafti .layout5-row.padding-all .span4,
+body.stefan-asafti .layout5-row.padding-all .span6,
+body.stefan-asafti .layout5-row.padding-all .span12 {
+    margin-left: 0px;
+}*/
+
+/*@media screen and (max-width: 724px) {
+
+    body.stefan-asafti .layout5-row .span4,
+    body.stefan-asafti .layout5-row .span6,
+    body.stefan-asafti .layout5-row .span12 {
+        display: unset;
+    }
+
+    body.stefan-asafti .container .layout5-row .span4 .section.margins-on,
+    body.stefan-asafti .container .layout5-row .span6 .section.margins-on,
+    body.stefan-asafti .container .layout5-row .span12 .section.margins-on {
+        padding: unset;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    body.stefan-asafti .container .layout5-row .span4 .first .section.margins-on,
+    body.stefan-asafti .container .layout5-row .span6 .first .section.margins-on,
+    body.stefan-asafti .container .layout5-row .span12 .first .section.margins-on {
+        padding-top: 0;
+    }
+
+    body.stefan-asafti .container .layout5-row .span4 .last .section.margins-on,
+    body.stefan-asafti .container .layout5-row .span6 .last .section.margins-on,
+    body.stefan-asafti .container .layout5-row .span12 .last .section.margins-on {
+        padding-bottom: 0;
+    }
+}*/
+
+/*body.stefan-asafti .layout5-row.padding-all .span4,
+body.stefan-asafti .layout5-row.padding-leftright .span4 {
+    width: 33.29552%;
+}
+
+body.stefan-asafti .layout5-row.padding-all .span6,
+body.stefan-asafti .layout5-row.padding-leftright .span6 {
+    width: 50%;
+}*/
+
+/*body.stefan-asafti .outer-margin-on {
+    margin: 0px;
+}
+
+body.stefan-asafti .outer-margin-on.first {
+    margin-left: 0px;
+}*/
+
+/*body.stefan-asafti .outer-margin-on.last {
+    margin-right: 0px;
+}*/
+
+/*body.stefan-asafti .outer-margin-between {
+    margin-right: 20px;
+}
+
+body.stefan-asafti .outer-margin-between.last {
+    margin-right: 0px;
+}*/
+
+/*body.stefan-asafti .row-fluid.margins-topbottom {
+    margin: 20px 0px;
+}*/
+
+/*@media screen and (min-width: 724px) {
+    body.stefan-asafti .wrapper .content .row-fluid.padding-off [class*=span],
+    body.stefan-asafti .wrapper .content .row-fluid.padding-between [class*=span],
+    body.stefan-asafti .wrapper .content .row-fluid.padding-leftright [class*=span] {
+        margin-left: 0px;
+    }
+
+    body.stefan-asafti .wrapper .content .row-fluid.padding-off .span4,
+    body.stefan-asafti .wrapper .content .row-fluid.padding-between .span4 {
+        width: 33.3%;
+    }
+
+    body.stefan-asafti .wrapper .content .row-fluid.padding-off .span6,
+    body.stefan-asafti .wrapper .content .row-fluid.padding-between .span6 {
+        width: 50%;
+    }
+
+    body.stefan-asafti .wrapper .content .row-fluid.padding-off .span12,
+    body.stefan-asafti .wrapper .content .row-fluid.padding-between .span12 {
+        width: 100%;
+    }
+}*/
+
+    /* End stefan-asafti Rows Grid */
+
+    /* LY2: webline Rows Grid */
+
+/*body.webline .span3 .hero-btn {
+    min-width: 0px;
+}*/
+
+/*body.webline .section .content {
+    padding: 0px;
+}*/
+
+/*@media screen and (min-width: 724px) {*/
+    /* when there is NO container class applied, we have to have margin left of 20px */
+/*    body.webline .section.margins-on {
+        padding: 20px 20px 20px 20px;
+    }*/
+    /* where there is container class applied we have to have the maring left 0px */
+/*    body.webline .container .layout5-row.padding-all .section.margins-on {
+        padding: 20px 20px 20px 0px;
+    }
+}*/
+
+/*body.webline .container .layout5-row.padding-all .last .margins-on {
+    padding-right: 0px;
+}*/
+
+/*@media screen and (max-width: 724px) {
+
+    body.webline .layout5-row .span4,
+    body.webline .layout5-row .span6,
+    body.webline .layout5-row .span12 {
+        display: unset;
+    }
+
+    body.webline .container .layout5-row .span4 .section.margins-on,
+    body.webline .container .layout5-row .span6 .section.margins-on,
+    body.webline .container .layout5-row .span12 .section.margins-on {
+        padding: unset;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    body.webline .container .layout5-row .span4 .first .section.margins-on,
+    body.webline .container .layout5-row .span6 .first .section.margins-on,
+    body.webline .container .layout5-row .span12 .first .section.margins-on {
+        padding-top: 0;
+    }
+
+    body.webline .container .layout5-row .span4 .last .section.margins-on,
+    body.webline .container .layout5-row .span6 .last .section.margins-on,
+    body.webline .container .layout5-row .span12 .last .section.margins-on {
+        padding-bottom: 0;
+    }
+}*/
+
+/*body.webline .layout5-row.padding-all .span4,
+body.webline .layout5-row.padding-all .span6,
+body.webline .layout5-row.padding-all .span12 {
+    margin-left: 0px;
+}
+
+body.webline .layout5-row.padding-all .span4,
+body.webline .layout5-row.padding-leftright .span4 {
+    width: 33.29552%;
+}
+
+body.webline .layout5-row.padding-all .span6,
+body.webline .layout5-row.padding-leftright .span6 {
+    width: 50%;
+}*/
+
+/*body.webline .outer-margin-on {
+    margin: 0px;
+}
+
+body.webline .outer-margin-on.first {
+    margin-left: 0px;
+}
+
+body.webline .outer-margin-on.last {
+    margin-right: 0px;
+}
+
+body.webline .outer-margin-between {
+    margin-right: 20px;
+}
+
+body.webline .outer-margin-between.last {
+    margin-right: 0px;
+}*/
+
+/*body.webline .row-fluid.margins-topbottom {
+    margin: 20px 0px;
+}
+
+@media screen and (min-width: 724px) {
+    body.webline .wrapper .content .row-fluid.padding-off [class*=span],
+    body.webline .wrapper .content .row-fluid.padding-between [class*=span],
+    body.webline .wrapper .content .row-fluid.padding-leftright [class*=span] {
+        margin-left: 0px;
+    }
+
+    body.webline .wrapper .content .row-fluid.padding-off .span4,
+    body.webline .wrapper .content .row-fluid.padding-between .span4 {
+        width: 33.3%;
+    }
+
+    body.webline .wrapper .content .row-fluid.padding-off .span6,
+    body.webline .wrapper .content .row-fluid.padding-between .span6 {
+        width: 50%;
+    }
+
+    body.webline .wrapper .content .row-fluid.padding-off .span12,
+    body.webline .wrapper .content .row-fluid.padding-between .span12 {
+        width: 100%;
+    }
+}*/
+
+    /* End webline Rows Grid */
+
+    /* LY3: photographer_v4 Rows Grid */
+
+/*body.photographer_v4 .span3 .hero-btn {
+    min-width: 0px;
+}
+
+body.photographer_v4 .section .content {
+    padding: 0px;
+}*/
+
+/*@media screen and (min-width: 724px) {*/
+    /* when there is NO container class applied, we have to have margin left of 20px */
+/*    body.photographer_v4 .section.margins-on {
+        padding: 20px 20px 20px 20px;
+    }*/
+    /* where there is container class applied we have to have the maring left 0px */
+/*    body.photographer_v4 .container .layout5-row.padding-all .section.margins-on {
+        padding: 20px 20px 20px 0px;
+    }
+}*/
+
+/*body.photographer_v4 .container .layout5-row.padding-all .first .margins-on {
+    padding-left: 20px;
+}*/
+
+/*body.photographer_v4 .container .layout5-row.padding-leftright .section.padding-leftright {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}*/
+
+/*body.photographer_v4 .container .layout5-row.padding-leftright .first .padding-leftright {
+    padding-left: 20px;
+}
+
+body.photographer_v4 .container .layout5-row.padding-leftright .last .padding-leftright {
+    padding-right: 20px;
+}*/
+
+/*@media screen and (max-width: 724px) {
+
+    body.photographer_v4 .layout5-row .span4,
+    body.photographer_v4 .layout5-row .span6,
+    body.photographer_v4 .layout5-row .span12 {
+        display: unset;
+    }
+
+    body.photographer_v4 .container .layout5-row .span4 .section.margins-on,
+    body.photographer_v4 .container .layout5-row .span6 .section.margins-on,
+    body.photographer_v4 .container .layout5-row .span12 .section.margins-on {
+        padding: unset;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    body.photographer_v4 .container .layout5-row .span4 .first .section.margins-on,
+    body.photographer_v4 .container .layout5-row .span6 .first .section.margins-on,
+    body.photographer_v4 .container .layout5-row .span12 .first .section.margins-on {
+        padding-top: 0;
+    }
+
+    body.photographer_v4 .container .layout5-row .span4 .last .section.margins-on,
+    body.photographer_v4 .container .layout5-row .span6 .last .section.margins-on,
+    body.photographer_v4 .container .layout5-row .span12 .last .section.margins-on {
+        padding-bottom: 0;
+    }
+}*/
+
+/*body.photographer_v4 .layout5-row.padding-all .span4,
+body.photographer_v4 .layout5-row.padding-all .span6,
+body.photographer_v4 .layout5-row.padding-all .span12 {
+    margin-left: 0px;
+}
+
+body.photographer_v4 .layout5-row.padding-all .span4,
+body.photographer_v4 .layout5-row.padding-leftright .span4 {
+    width: 33.29552%;
+}
+
+body.photographer_v4 .layout5-row.padding-all .span6,
+body.photographer_v4 .layout5-row.padding-leftright .span6 {
+    width: 50%;
+}*/
+
+/*body.photographer_v4 .outer-margin-on {
+    margin: 0px;
+}
+
+    body.photographer_v4 .outer-margin-on.first {
+        margin-left: 0px;
+    }
+
+    body.photographer_v4 .outer-margin-on.last {
+        margin-right: 0px;
+    }*/
+
+/*body.photographer_v4 .outer-margin-between {
+    margin-right: 20px;
+}
+
+    body.photographer_v4 .outer-margin-between.last {
+        margin-right: 0px;
+    }*/
+
+/*body.photographer_v4 .row-fluid.margins-topbottom {
+    margin: 20px 0px;
+}*/
+
+/*@media screen and (min-width: 724px) {
+    body.photographer_v4 .wrapper .content .row-fluid.padding-off [class*=span],
+    body.photographer_v4 .wrapper .content .row-fluid.padding-between [class*=span],
+    body.photographer_v4 .wrapper .content .row-fluid.padding-leftright [class*=span] {
+        margin-left: 0px;
+    }
+
+    body.photographer_v4 .wrapper .content .row-fluid.padding-off .span4,
+    body.photographer_v4 .wrapper .content .row-fluid.padding-between .span4 {
+        width: 33.3%;
+    }
+
+    body.photographer_v4 .wrapper .content .row-fluid.padding-off .span6,
+    body.photographer_v4 .wrapper .content .row-fluid.padding-between .span6 {
+        width: 50%;
+    }
+
+    body.photographer_v4 .wrapper .content .row-fluid.padding-off .span12,
+    body.photographer_v4 .wrapper .content .row-fluid.padding-between .span12 {
+        width: 100%;
+    }
+}*/
+
+    /* End photographer_v4 Rows Grid */
+
+    /* LY4: layout4 Rows Grid */
+
+/*body.layout4 .span3 .hero-btn {
+    min-width: 0px;
+}
+
+body.layout4 .section .content {
+    padding: 0px;
+}*/
+
+
+/*@media screen and (min-width: 724px) {*/
+    /* when there is NO container class applied, we have to have margin left of 20px */
+/*    body.layout4 .section.margins-on {
+        padding: 20px 20px 20px 20px;
+    }*/
+
+
+    /* where there is container class applied we have to have the maring left 0px */
+/*    body.layout4 .container .layout5-row.padding-all .section.margins-on {
+        padding: 20px 20px 20px 0px;
+    }
+}*/
+
+/*body.layout4 .container .layout5-row.padding-all .first .margins-on {
+    padding-left: 20px;
+}
+
+body.layout4 .container .layout5-row.padding-leftright .section.padding-leftright {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}*/
+
+/*body.layout4 .container .layout5-row.padding-leftright .first .padding-leftright {
+    padding-left: 20px;
+}
+
+body.layout4 .container .layout5-row.padding-leftright .last .padding-leftright {
+    padding-right: 20px;
+}*/
+
+
+
+/*@media screen and (max-width: 724px) {
+
+    body.layout4 .layout5-row .span4,
+    body.layout4 .layout5-row .span6,
+    body.layout4 .layout5-row .span12 {
+        display: unset;
+    }
+
+    body.layout4 .container .layout5-row .span4 .section.margins-on,
+    body.layout4 .container .layout5-row .span6 .section.margins-on,
+    body.layout4 .container .layout5-row .span12 .section.margins-on {
+        padding: unset;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    body.layout4 .container .layout5-row .span4 .first .section.margins-on,
+    body.layout4 .container .layout5-row .span6 .first .section.margins-on,
+    body.layout4 .container .layout5-row .span12 .first .section.margins-on {
+        padding-top: 0;
+    }
+
+    body.layout4 .container .layout5-row .span4 .last .section.margins-on,
+    body.layout4 .container .layout5-row .span6 .last .section.margins-on,
+    body.layout4 .container .layout5-row .span12 .last .section.margins-on {
+        padding-bottom: 0;
+    }
+}*/
+
+/*body.layout4 .layout5-row.padding-all .span4,
+body.layout4 .layout5-row.padding-all .span6,
+body.layout4 .layout5-row.padding-all .span12 {
+    margin-left: 0px;
+}
+
+body.layout4 .layout5-row.padding-all .span4,
+body.layout4 .layout5-row.padding-leftright .span4 {
+    width: 33.29552%;
+}
+
+body.layout4 .layout5-row.padding-all .span6,
+body.layout4 .layout5-row.padding-leftright .span6 {
+    width: 50%;
+}*/
+
+
+/*body.layout4 .outer-margin-on {
+    margin: 0px;
+}
+
+    body.layout4 .outer-margin-on.first {
+        margin-left: 0px;
+    }
+
+    body.layout4 .outer-margin-on.last {
+        margin-right: 0px;
+    }
+
+body.layout4 .outer-margin-between {
+    margin-right: 20px;
+}
+
+    body.layout4 .outer-margin-between.last {
+        margin-right: 0px;
+    }
+
+body.layout4 .row-fluid.margins-topbottom {
+    margin: 20px 0px;
+}*/
+
+/*@media screen and (min-width: 724px) {
+    body.layout4 .wrapper .content .row-fluid.padding-off [class*=span],
+    body.layout4 .wrapper .content .row-fluid.padding-between [class*=span],
+    body.layout4 .wrapper .content .row-fluid.padding-leftright [class*=span] {
+        margin-left: 0px;
+    }
+
+    body.layout4 .wrapper .content .row-fluid.padding-off .span4,
+    body.layout4 .wrapper .content .row-fluid.padding-between .span4 {
+        width: 33.3%;
+    }
+
+    body.layout4 .wrapper .content .row-fluid.padding-off .span6,
+    body.layout4 .wrapper .content .row-fluid.padding-between .span6 {
+        width: 50%;
+    }
+
+    body.layout4 .wrapper .content .row-fluid.padding-off .span12,
+    body.layout4 .wrapper .content .row-fluid.padding-between .span12 {
+        width: 100%;
+    }
+}*/
+
+    /* End layout4 Rows Grid */
+
+    /* LY5: mobile spacings settings */
+
+    /*@media screen and (max-width: 724px) {*/
+        /*body.layout5 .content-wrapper>.container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        body.layout5 .wrapper > .content > .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }*/
+
+        /* Spacing between content groups should always be 80px on mobile, regardless of the group spacing applied on computer. */
+        /*body.photographer_v4 .row-fluid.layout5-row > div {
+            margin: 0px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        body.photographer_v4 .wrapper .content .row-fluid.padding-all {
+            margin: 0px;
+        }
+
+        body.photographer_v4 .wrapper .content .row-fluid.layout5-row {
+            margin: 0px;
+            margin-bottom: 80px;
+        }*/
+
+        /*body.photographer_v4 .wrapper .content .row-fluid.layout5-row > div:last-child {
+            margin: 0px;
+        }
+
+        body.photographer_v4 .wrapper .content .row-fluid.layout5-row > div:first-child {
+            padding: 0px;
+        }*/
+
+        /*body.photographer_v4 .container #right, body.photographer_v4 #right {
+            width: auto;
+        }*/
+
+        /* LY4 mobile */
+        /*body.layout4 .row-fluid.layout5-row > div {
+            margin: 0px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        body.layout4 .wrapper .content .row-fluid.padding-all {
+            margin: 0px;
+        }
+
+        body.layout4 .wrapper .content .row-fluid.layout5-row {
+            margin: 0px;
+            margin-bottom: 80px;
+        }
+
+        body.layout4 .wrapper .content .row-fluid.layout5-row > div:last-child {
+            margin: 0px;
+        }
+
+        body.layout4 .wrapper .content .row-fluid.layout5-row > div:first-child {
+            padding: 0px;
+        }*/
+
+
+        /*body.layout4 .container #right, body.layout4 #right {
+            width: auto;
+        }*/
+
+        /* LY5 mobile */
+
+        /*body.layout5 .row-fluid.layout5-row.padding-all > .span4,
+        body.layout5 .row-fluid.layout5-row.padding-all > .span6,
+        body.layout5 .row-fluid.layout5-row.padding-all > .span12 {
+            margin: 0px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        body.layout5 .row-fluid.layout5-row.padding-leftright>.span4,
+        body.layout5 .row-fluid.layout5-row.padding-leftright>.span6,
+        body.layout5 .row-fluid.layout5-row.padding-leftright>.span12 {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        body.layout5 .row-fluid.layout5-row.padding-leftright .span4:first-child,
+        body.layout5 .row-fluid.layout5-row.padding-leftright .span6:first-child,
+        body.layout5 .row-fluid.layout5-row.padding-leftright .span12:first-child {
+            padding-top: 0;
+        }
+
+        body.layout5 .row-fluid.layout5-row.padding-leftright .span4:last-child,
+        body.layout5 .row-fluid.layout5-row.padding-leftright .span6:last-child,
+        body.layout5 .row-fluid.layout5-row.padding-leftright .span12:last-child {
+            padding-bottom: 0;
+        }*/
+
+
+        /*body.layout5 .wrapper .content .row-fluid.padding-all {
+            margin: 0px;
+        }*/
+
+        /*body.layout5 .wrapper .content .row-fluid.layout5-row {
+            margin: 0px;
+            margin-bottom: 80px;
+        }
+
+            body.layout5 .wrapper .content .row-fluid.layout5-row > div:last-child {
+                margin: 0px;
+            }
+
+        body.layout5 .container #right, body.layout5 #right {
+            width: auto;
+        }*/
+
+        /* stefan-asafti mobile */
+
+        /*body.stefan-asafti .row-fluid.layout5-row > div {
+            margin: 0px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        body.stefan-asafti .wrapper .content .row-fluid.padding-all {
+            margin: 0px;
+        }
+
+        body.stefan-asafti .wrapper .content .row-fluid.layout5-row {
+            margin: 0px;
+            margin-bottom: 80px;
+        }*/
+
+        /*body.stefan-asafti .wrapper .content .row-fluid.layout5-row > div:last-child {
+            margin: 0px;
+        }
+
+        body.stefan-asafti .wrapper .content .row-fluid.layout5-row > div:first-child {
+            padding: 0px;
+        }*/
+
+        /*body.stefan-asafti .container #right, body.stefan-asafti #right {
+            width: auto;
+        }*/
+
+        /* webline mobile */
+
+       /* body.webline .row-fluid.layout5-row > div {
+            margin: 0px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        body.webline .wrapper .content .row-fluid.padding-all {
+            margin: 0px;
+        }
+
+        body.webline .wrapper .content .row-fluid.layout5-row {
+            margin: 0px;
+            margin-bottom: 80px;
+        }
+
+        body.webline .wrapper .content .row-fluid.layout5-row > div:last-child {
+            margin: 0px;
+        }
+
+        body.webline .wrapper .content .row-fluid.layout5-row > div:first-child {
+            padding: 0px;
+        }
+
+        body.webline .container #right, body.webline #right {
+            width: auto;
+        }
+    }*/
+
+    /* LY5: End mobile spacings settings */
+
+
+    .grid-sizer {
+        width: 33.333%;
+    }
+
+    @media screen and (min-width: 920px) {
+        /* 5 columns for larger screens */
+        .grid-sizer {
+            width: 20%;
+        }
+    }
+
+    /* resregard the thumbnails container height calculated in the code for Collage View */
+    .photo-album-collage .thumbnails {
+        height: auto !important; /* overwrites inline style set at an unknown location in the code. When the said code is found and removed this could be removed too.*/
+    }
+
+    /* justifies the last row of the collage gallery*/
+    .photo-album-collage .thumbnails {
+        text-align-last: justify;
+        -webkit-column-count: 3; /* Chrome, Safari, Opera */
+        -moz-column-count: 3; /* Firefox */
+        column-count: 3;
+    }
+
+        /* prevents spreding images on both sides of the row when there are 2 out of 3 images in the row */
+        .photo-album-collage .thumbnails:after {
+            content: "";
+            display: inline-block;
+            width: 32%;
+            height: 0;
+        }
+
+        /* The next three rules are needed for legacy compiled user page designs - DO NOT REMOVE */
+        .photo-album-collage .thumbnails .thumbnail {
+            height: auto;
+            min-height: unset;
+        }
+
+        .photo-album-collage .thumbnails li:nth-child(n) {
+            width: 100%;
+        }
+
+            .photo-album-collage .thumbnails li:nth-child(n) img {
+                height: auto;
+            }
+
+    #recaptcha_widget > div {
+        float: right;
+    }
+
+    .page-comments-form .recaptcha > div {
+        margin-top: 15px;
+    }
+
+    .span4.last-in-row, .span6.last-in-row {
+        float: right;
+    }
+
+    /* contact-section */
+    .contact-section .cf-preview-label {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 6px;
+        min-height: auto;
+    }
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 0px;
+    padding-left: 8px;
+}
+
+    .contact-section button {
+        width: 120px !important;
+        height: 36px;
+        border: 0 !important;
+        float: right;
+        font-size: 16px;
+        border-radius: 2px !important;
+        margin: 0px;
+    }
+
+    .contact-section button span.button-text {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        margin-right: -10px;
+    }
+
+    .contact-section button .hover-icon {
+        opacity: 0;
+        right: -5px;
+        transition: 0.5s;
+    }
+
+
+    .contact-section button:hover .button-text {
+        padding-right: 15px;
+    }
+
+    .contact-section button:hover .hover-icon {
+        right: 0;
+        opacity: 1;
+    }
+
+
+    .contact-section .success-message {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .blink_me {
+        animation: blinker 2s linear 3;
+    }
+
+    .invalid-input {
+        border-color: red !important;
+        transition: .5s
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+
+/* end contact-section*/
+/*@media screen and (max-width: 724px) {
+    body.photographer_v4 div.container,
+    body.layout4 div.container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    body.webline .wrapper > .content,
+    body.stefan-asafti .wrapper > .content {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    body.stefan-asafti .span9 .wrapper .content .row-fluid:last-child,
+    body.webline .span9 .wrapper .content .row-fluid:last-child,
+    body.photographer_v4 .span9 .wrapper .content .row-fluid:last-child,
+    body.layout4 .span9 .wrapper .content .row-fluid:last-child {
+        margin-bottom: 0;
+    }
+}*/
+.photo-album .slideshow .slides-container img {
+    max-height: 465px;
+    height: unset !important;
+    top: unset !important;
+    bottom: 0;
+}
+
+.column-article-section > .span4 {
+    padding-right: 10px;
+}
+
+.video-player > .player > div {
+    text-align: center;
+}
+
+.video-player > .ratio-setter {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.video-player > .player > iframe.externalvideoframe {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+body.layout5 .animated-hide {
+    opacity: 0;
+}
+
+a.btn .btn-trans {
+    transition: .4s;
+}
+
+.content .container {
+    width: auto
+}
+
+/*.headertype-5-sticky-nav-bar, .headertype-6-sticky-nav-bar, .sticky {
+    height: unset;
+}*/
+
+/*.headerlayout6 .ss-pagemenu__desktop__page-list{
+    align-items: flex-start;
+    margin: 0;
+}*/
+
+.dynamicHeaderContainer .site-header__title {
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.hidden-desktop .site-header__title {
+    font-size: 14px;
+}
+
+.layout5 .hidden-desktop {
+    margin: 10px 20px;
+}
+
+
+.header-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+}
+
+.normal-menu {
+    display: flex;
+}
+.normal-menu.prerendered {
+    opacity: 0;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.menu-too-wide .normal-menu {
+    display: none;
+}
+
+.menu-too-wide .burger-menu {
+    display: flex;
+}
+
+.layout6-margin {
+    width: inherit;
+    margin: inherit;
+}
+
+.menu-align {
+    justify-content: center;
+    margin: auto;
+}
+
+.horizontal-header .menu-align {
+    justify-content: flex-end;
+}
+.dynamicHeaderContainer .headerlayout5and6 .ss-pagemenu__desktop__page-list {
+    flex-wrap: nowrap;
+    width:100%;
+}
+.dynamicHeaderContainer .headerlayout5and6 .basket-element:hover {
+    padding: 0px;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .title-content-align {
+    justify-content: left;
+    align-items: center;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .horizontal-header {
+    display: flex;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .horizontal-header .logo {
+    min-width: fit-content;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .horizontal-header .dynamic-header-logo {
+    padding: 0;
+    margin-right: 24px;
+}
+
+.dynamicHeaderContainer .headerlayout5 .dynamic-header-logo .logo-img {
+    padding: 0px 5px 20px;
+    max-width: 250px;
+    max-height: 80px;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .horizontal-header .dynamic-header-logo .logo-img {
+    padding: 0;
+    max-width: 150px;
+    max-height: 80px;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .hidden-desktop .header-elements {
+    align-items: center
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .hidden-desktop .dynamic-header-logo .logo-img {
+    padding: 0 10px;
+    max-width: 50px;
+    max-height: 36px;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .hidden-desktop .cart-icon .cart-icon-icon {
+    font-size: 41px;
+}
+
+.headerlayout5 .header-main.hideable .desktop-view .layout56-menu-style {
+    padding: 0;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .cart-icon .cart-number {
+    z-index: 0;
+}
+
+.content-wrapper .content-inner > div {
+    padding-top: 0px;
+}
+
+.headertype-5-sticky-nav-bar, .headertype-6-sticky-nav-bar {
+    padding: 0;
+}
+
+.dynamicHeaderContainer .headerlayout5and6 .container .desktop-view {
+    padding: 10px 0;
+}
+
+.header-sticky {
+    display: none;
+}
+
+.layout5 .ss-pagemenu__desktop__page-list-element .cart-icon {
+    position: relative;
+}
+
+.layout5 .ss-pagemenu__desktop__page-list-element .cart-icon .cart-number {
+    top: 12px;
+}

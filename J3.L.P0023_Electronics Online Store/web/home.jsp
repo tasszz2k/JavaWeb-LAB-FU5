@@ -34,96 +34,36 @@
                         <div id="left" class="span9"> <!-- ADD "span12" if no sidebar, or "span9" with sidebar -->
                             <div class="wrapper ">
                                 <div class="content">
-                                    <div class="section">
-                                        <div class="content">
-                                            <ul class="thumbnails column-article-section">
-                                                <li class="span4">
-                                                    <div class="img-simple span12 ">
-                                                        <div class="image">
-                                                            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/35/99/285978584107096373/i285978589337227255._szw1280h1280_.jpg"><img src="${ctx}/template/i285978589337227255._rsw480h360_szw480h360_.jpg"></a>
-                                                        </div>
-                                                    </div>
+                                    <c:set var="index" value="${1}"/>
+                                    <c:forEach var="product" items="${listProducts}">
+                                        <c:if test="${index%3 eq 1}">
+                                            <div class="section">
+                                                <div class="content">
+                                                    <ul class="thumbnails column-article-section">
+                                        </c:if>
+                                        <li class="span4">
+                                            <div class="img-simple span12 ">
+                                                <div class="image">
+                                                    <a rel="nofollow" data-ss="imagemodal" data-href="${ctx}/template/${product.image}">
+                                                        <img src="${ctx}/template/${product.image}"></a>
+                                                </div>
+                                            </div>
 
-                                                    <h4>
-                                                        <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/category/582778">Headphones</a>
-                                                    </h4>
+                                            <h4>
+                                                <a rel="nofollow" href="detail?id=${product.id}">${product.name}</a>
+                                            </h4>
 
-                                                    <p>Lorem ipsum dolor sit amet.</p>
-                                                </li>
-                                                <li class="span4">
-                                                    <div class="img-simple span12 ">
-                                                        <div class="image">
-                                                            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/35/99/285978584107096373/i285978589337227261._szw1280h1280_.jpg"><img src="${ctx}/template/i285978589337227261._rsw480h360_szw480h360_.jpg"></a>
-                                                        </div>
-                                                    </div>
+                                            <p>${product.description}</p>
+                                        </li>
+                                        <c:if test="${index%3 eq 0 or index eq listProducts.size()}">
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </c:if>
+                                        <c:set var="index" value="${index+1}"/>
+                                    </c:forEach>
 
-                                                    <h4>
-                                                        <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/category/582778">GPS</a>
-                                                    </h4>
-
-                                                    <p>Lorem ipsum dolor sit amet.</p>
-                                                </li>
-                                                <li class="span4">
-                                                    <div class="img-simple span12 ">
-                                                        <div class="image">
-                                                            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/35/99/285978584107096373/i285978589337227269._szw1280h1280_.jpg"><img src="${ctx}/template/i285978589337227269._rsw480h360_szw480h360_.jpg"></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <h4>
-                                                        <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/category/582778">Television</a>
-                                                    </h4>
-
-                                                    <p>Lorem ipsum dolor sit amet.</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="section">
-                                        <div class="content">
-                                            <ul class="thumbnails column-article-section">
-                                                <li class="span4">
-                                                    <div class="img-simple span12 ">
-                                                        <div class="image">
-                                                            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/35/99/285978584107096373/i285978589337227273._szw1280h1280_.jpg"><img src="${ctx}/template/i285978589337227273._rsw480h360_szw480h360_.jpg"></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <h4>
-                                                        <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/category/582778">Notebook</a>
-                                                    </h4>
-
-                                                    <p>Lorem ipsum dolor sit amet.</p>
-                                                </li>
-                                                <li class="span4">
-                                                    <div class="img-simple span12 ">
-                                                        <div class="image">
-                                                            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/35/99/285978584107096373/i285978589337227280._szw1280h1280_.jpg"><img src="${ctx}/template/i285978589337227280._rsw480h360_szw480h360_.jpg"></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <h4>
-                                                        <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/category/582778">Smartphone charger</a>
-                                                    </h4>
-
-                                                    <p>Lorem ipsum dolor sit amet.</p>
-                                                </li>
-                                                <li class="span4">
-                                                    <div class="img-simple span12 ">
-                                                        <div class="image">
-                                                            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/35/99/285978584107096373/i285978589337227283._szw1280h1280_.jpg"><img src="${ctx}/template/i285978589337227283._rsw480h360_szw480h360_.jpg"></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <h4>
-                                                        <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/category/582778">Router</a>
-                                                    </h4>
-
-                                                    <p>Lorem ipsum dolor sit amet.</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                  
                                     <div class="section article">
                                         <div class="heading">
                                             <h3>Quality products at a good price</h3>

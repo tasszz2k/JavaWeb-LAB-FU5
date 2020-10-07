@@ -9,6 +9,7 @@ GO
 CREATE TABLE [PRODUCT](
 [ID] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 [NAME] VARCHAR(255),
+[IMAGE] VARCHAR(255),
 [DESCRIPTION] TEXT,
 [PRICE] FLOAT,
 [QUANTITY] INT
@@ -50,13 +51,57 @@ CREATE TABLE [MESSAGE](
 [CONTENT] TEXT
 )
 /*CREATE TABLE*/
+/*INSERT*/
+INSERT INTO dbo.PRODUCT
+(NAME,IMAGE,DESCRIPTION,PRICE,QUANTITY)
+VALUES
+('Television', 'i285978589337227269._rsw480h360_szw480h360_.jpg','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.',
+260, 100);
+INSERT INTO dbo.PRODUCT
+(NAME,IMAGE,DESCRIPTION,PRICE,QUANTITY)
+VALUES
+('GPS', 'i285978589337227261._rsw480h360_szw480h360_.jpg','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.',
+180, 100);
+INSERT INTO dbo.PRODUCT
+(NAME,IMAGE,DESCRIPTION,PRICE,QUANTITY)
+VALUES
+('Headphones', 'i285978589337227255._rsw480h360_szw480h360_.jpg','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.',
+220, 100);
+INSERT INTO dbo.PRODUCT
+(NAME,IMAGE,DESCRIPTION,PRICE,QUANTITY)
+VALUES
+('NoteBook', 'i285978589337769103._rsw480h480_szw480h480_.jpg','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.',
+260, 100);
+INSERT INTO dbo.PRODUCT
+(NAME,IMAGE,DESCRIPTION,PRICE,QUANTITY)
+VALUES
+('Smartphone charger', 'i285978589337769145._rsw480h480_szw480h480_.jpg','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.',
+160, 100);
+INSERT INTO dbo.PRODUCT
+(NAME,IMAGE,DESCRIPTION,PRICE,QUANTITY)
+VALUES
+('Router', 'i285978589337227283._rsw480h360_szw480h360_.jpg','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.',
+320, 100);
 
+/*INSERT*/
+/**/
 
 /*QUERY*/
-DROP TABLE dbo.[ORDER]
-DROP TABLE dbo.CUSTOMER
-DROP TABLE dbo.PRODUCT
-DROP TABLE dbo.STOCK
-DROP TABLE dbo.ORDER_PRODUCT
+SELECT * FROM dbo.PRODUCT WHERE ID=1
 
 SELECT * FROM dbo.CUSTOMER
+
+SELECT TOP(6) * FROM dbo.PRODUCT
+
+
+/*Checkout*/
+INSERT INTO dbo.CUSTOMER
+VALUES
+('TASS', 'FPT','HL','','1000','HN','xxx','VN','0199999999','tasszz2k@gmail.com','gut gut!')
+
+INSERT INTO dbo.[ORDER]
+VALUES
+(1, GETDATE())
+
+
+/*Checkout*/

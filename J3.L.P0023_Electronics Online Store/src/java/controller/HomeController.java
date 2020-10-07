@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dao.GalleryDAO;
+import dao.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -14,7 +14,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
+import model.ProductModel;
 
 /**
  *
@@ -61,12 +62,16 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-           
-            request.getRequestDispatcher("home.jsp").forward(request, response);
-        } catch (Exception ex) {
-            //
-        }
+//        try {
+        HttpSession session = request.getSession(false);
+        ProductDAO productDAO = new ProductDAO();
+        List<ProductModel> listProducts = productDAO.getAllTop(6);
+
+        request.setAttribute("listProducts", listProducts);
+        request.getRequestDispatcher("home.jsp").forward(request, response);
+//        } catch (Exception ex) {
+//            //
+//        }
 
     }
 

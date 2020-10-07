@@ -8,7 +8,6 @@ package controller;
 import dao.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,8 +19,8 @@ import model.ProductModel;
  *
  * @author TASS
  */
-@WebServlet(name = "StoreController", urlPatterns = {"/store"})
-public class StoreController extends HttpServlet {
+@WebServlet(name = "DetailController", urlPatterns = {"/detail"})
+public class DetailController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +39,10 @@ public class StoreController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet StoreController</title>");
+            out.println("<title>Servlet DetailController</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet StoreController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet DetailController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -61,17 +60,12 @@ public class StoreController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        try {
-            ProductDAO productDAO = new ProductDAO();
-            List<ProductModel> listProducts = productDAO.getAll();
-            
-            
-            
-            request.setAttribute("listProducts", listProducts);
-            request.getRequestDispatcher("store.jsp").forward(request, response);
-//        } catch (Exception ex) {
-//            //
-//        }
+        int id = Integer.parseInt(request.getParameter("id"));
+        ProductDAO productDAO = new ProductDAO();
+        ProductModel product = productDAO.findById(id);
+        
+        request.setAttribute("product", product);
+        request.getRequestDispatcher("detail.jsp").forward(request, response);
     }
 
     /**

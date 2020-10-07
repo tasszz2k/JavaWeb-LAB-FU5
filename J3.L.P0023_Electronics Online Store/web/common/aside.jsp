@@ -4,14 +4,14 @@
             <div class="content">
                 <div class="cart-icon">
                     <i class="icon-cart-empty cart-icon-icon"></i>
-                    <span class="cart-number">0</span>
+                    <span class="cart-number" >${sessionScope.order.totalItems}</span>
                 </div>
                 <div class="shop-box-text">
-                    <a rel="nofollow" href="http://us-123-electronic.simplesite.com/423612427/basket#basket">
+                    <a rel="nofollow" href="basket">
                         Your basket
                     </a>
                 </div>
-                <a rel="nofollow" class="btn btn-block btn-shop-checkout hide" type="button" href="http://us-123-electronic.simplesite.com/423612427/basket#checkout">Checkout</a>
+                <a rel="nofollow" class="btn btn-block btn-shop-checkout hide" type="button" href="checkout">Checkout</a>
 
             </div>
         </div>

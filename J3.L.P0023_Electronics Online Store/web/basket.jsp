@@ -27,7 +27,8 @@
             <div class="container-fluid content-wrapper" id="content"> <!-- this is the Content Wrapper -->
                 <div class="container">
                     <div class="row-fluid content-inner">
-                        <div id="left" class="span12"><div class="wrapper shop shop-basket"><div class="controls shop-basket-top-buttons"><a class="btn" href="http://us-123-electronic.simplesite.com/423612427/category/582778/online-store">Buy more</a>
+                        <div id="left" class="span12"><div class="wrapper shop shop-basket"><div class="controls shop-basket-top-buttons">
+                                    <a class="btn" href="store">Buy more</a>
                                     <button name="checkout" class="btn" type="button">Checkout</button></div>
                                 <div class="shop-basket-title heading">
                                     <h2 class="page-title pull-left">Your Basket</h2>
@@ -46,76 +47,51 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr><td class="shop-basket-product">
+                                                    <c:forEach var="orderProduct" items="${sessionScope.order.listOrders}">
+                                                        <tr>
+                                                            <td class="shop-basket-product">
 
-                                                            <a href="http://us-123-electronic.simplesite.com/423612427/product/1799399/television" class="shop-basket-product-image">
-                                                                <img src="${ctx}/template/i285978589337768905._rsw480h480_szw480h480_.jpg">
-                                                            </a>
+                                                                <a href="${orderProduct.product.image}" class="shop-basket-product-image">
+                                                                    <img src="${ctx}/template/i285978589337768905._rsw480h480_szw480h480_.jpg">
+                                                                </a>
 
-                                                            <h4 class="shop-basket-product-title"><a href="http://us-123-electronic.simplesite.com/423612427/product/1799399/television">Television</a></h4>
-                                                            <p>Delivery: 1-2 business days</p>
-
-
-                                                        </td>
-                                                        <td class="shop-basket-price">
-                                                            <p class="shop-basket-product-price">260.00 USD</p>
-                                                        </td>
-                                                        <td class="shop-basket-quantity">
-
-                                                            <i class="icon-spinner icon-spin hide"></i>
-                                                            <input type="text" class="shop-quantity" value="2">
-
-                                                        </td>
-                                                        <td class="shop-basket-total">
-                                                            <p>520.00 USD</p>
-                                                        </td>
-
-                                                        <td class="shop-basket-actions">
-                                                            <button class="btn btn-remove" type="button">
-                                                                <i class="icon-remove"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr><tr><td class="shop-basket-product">
-
-                                                            <a href="http://us-123-electronic.simplesite.com/423612427/product/1799411/gps" class="shop-basket-product-image">
-                                                                <img src="${ctx}/template/i285978589337768969._rsw480h480_szw480h480_.jpg">
-                                                            </a>
-
-                                                            <h4 class="shop-basket-product-title"><a href="http://us-123-electronic.simplesite.com/423612427/product/1799411/gps">GPS</a></h4>
-                                                            <p>Delivery: 1-2 business days</p>
+                                                                <h4 class="shop-basket-product-title"><a href="detail?id=${orderProduct.product.id}}">${orderProduct.product.name}</a></h4>
+                                                                <!--<p>Delivery: 1-2 business days</p>-->
 
 
-                                                        </td>
-                                                        <td class="shop-basket-price">
-                                                            <p class="shop-basket-product-price">180.00 USD</p>
-                                                        </td>
-                                                        <td class="shop-basket-quantity">
+                                                            </td>
+                                                            <td class="shop-basket-price">
+                                                                <p class="shop-basket-product-price">${orderProduct.product.price} USD</p>
+                                                            </td>
+                                                            <td class="shop-basket-quantity">
 
-                                                            <i class="icon-spinner icon-spin hide"></i>
-                                                            <input type="text" class="shop-quantity" value="2">
+                                                                <i class="icon-spinner icon-spin hide"></i>
+                                                                <input type="text" class="shop-quantity" value="${orderProduct.quantity}">
 
-                                                        </td>
-                                                        <td class="shop-basket-total">
-                                                            <p>360.00 USD</p>
-                                                        </td>
+                                                            </td>
+                                                            <td class="shop-basket-total">
+                                                                <p>${orderProduct.total} USD</p>
+                                                            </td>
 
-                                                        <td class="shop-basket-actions">
-                                                            <button class="btn btn-remove" type="button">
-                                                                <i class="icon-remove"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr></tbody>
+                                                            <td class="shop-basket-actions">
+                                                                <button class="btn btn-remove" type="button">
+                                                                    <i class="icon-remove"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </c:forEach>
+                                                </tbody>
                                                 <tfoot>
                                                     <tr class="shop-basket-price">
                                                         <td>&nbsp;</td>
                                                         <td>
-                                                            <p>Subtotal</p>
-                                                            <p>Shipping</p>
+                                                            <p></p>
+                                                            <p></p>
                                                         </td>
                                                         <td>&nbsp;</td>
                                                         <td class="shop-basket-total">
-                                                            <p>880.00 USD</p>
-                                                            <p>14.00 USD</p>
+                                                            <p></p>
+                                                            <p></p>
                                                         </td>
                                                         <td>&nbsp;</td>
                                                     </tr>
@@ -126,7 +102,7 @@
                                                         </td>
                                                         <td>&nbsp;</td>
                                                         <td class="shop-basket-total">
-                                                            <p><strong>894.00 USD</strong></p>
+                                                            <p><strong>${sessionScope.order.total} USD</strong></p>
                                                         </td>
                                                         <td>&nbsp;</td>
                                                     </tr>
