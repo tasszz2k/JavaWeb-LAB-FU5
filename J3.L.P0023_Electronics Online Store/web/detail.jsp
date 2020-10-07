@@ -28,55 +28,65 @@
             <div class="container-fluid content-wrapper" id="content"> <!-- this is the Content Wrapper -->
                 <div class="container">
                     <div class="row-fluid content-inner">
-                        <div id="left" class="span9"> <!-- ADD "span12" if no sidebar, or "span9" with sidebar -->
-                            <div class="wrapper shop product-details">
-                                <div class="heading">
-                                    <h1 class="page-title">${product.name}</h1>
-                                </div>
+                        <form action="basket" method="get">
+                            <div id="left" class="span9"> <!-- ADD "span12" if no sidebar, or "span9" with sidebar -->
+                                <div class="wrapper shop product-details">
+                                    <div class="heading">
+                                        <h1 class="page-title">${product.name}</h1>
+                                    </div>
 
-                                <div class="content">
-                                    <div class="section">
-                                        <div class="content">
-                                            <div class="row-fluid">
-                                                <div class="span6 product-image">
-                                                    <div class="img-simple  ">
-                                                        <div class="image">
-                                                            <a data-ss="imagemodal" data-href="${ctx}/template/${product.image}" has-arrows="True">
-                                                                <img src="${ctx}/template/${product.image}"></a>
+                                    <div class="content">
+                                        <div class="section">
+                                            <div class="content">
+                                                <div class="row-fluid">
+                                                    <div class="span6 product-image">
+                                                        <div class="img-simple  ">
+                                                            <div class="image">
+                                                                <a data-ss="imagemodal" data-href="${ctx}/template/${product.image}" has-arrows="True">
+                                                                    <img src="${ctx}/template/${product.image}"></a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="span6">
-                                                    <dl class="dl-horizontal product-overview">
-                                                        <dt class="product-price">Price</dt>
-                                                        <dd class="product-price product-price-medium-large">${product.price} USD</dd>
+                                                    <div class="span6">
+                                                        <dl class="dl-horizontal product-overview">
+                                                            <dt class="product-price">Price</dt>
+                                                            <dd class="product-price product-price-medium-large">${product.price} USD</dd>
 
-                                                        <dt class="product-quantity">Quantity</dt>
-                                                        <dd class="product-quantity product-quantity-medium-large"><input class="product-quantity-input" type="number" value="1" max="${product.quantity}"></dd>
+                                                            <dt class="product-quantity">Quantity</dt>
+                                                            <dd class="product-quantity product-quantity-medium-large">
+                                                                <c:set value="${product.quantity - orderProduct.quantity}" var="max"/>
+                                                                <input class="product-quantity-input" type="number" value="1" min="1" max="${max}" name="quantity" >
+                                                            </dd>
+                                                        </dl>
+                                                        <div class="product-details-buttons">
 
-                                                    </dl>
-                                                    <div class="product-details-buttons">
-                                                        <button name="product" data-product_id="1799399" data-hassizes="False" class="btn " type="button">
-                                                            <a href="basket?productId=${product.id}">Add to basket</a>
-                                                        </button>
+                                                            <input type="hidden" name="productId" value="${product.id}">
+                                                            <input type="hidden" name="action" value="add">
+                                                            <c:if test="${max ne 0}">
+                                                                <input type="submit" data-product_id="1799399" data-hassizes="False" class="btn " value="Add to basket"/>
+                                                            </c:if>
+                                                            <c:if test="${max eq 0}">
+                                                                <input type="button" data-product_id="1799399" data-hassizes="False" class="btn-primary" value="Can't not buy more"/>
+                                                            </c:if>
 
+                                                        </div>
+                                                        <div class="product-description">
+                                                            <h5>Description</h5>
+                                                            <p>${product.description}</p>
+                                                        </div>
+                                                        <!--                                                    <div class="product-delivery-info">
+                                                                                                                <h5>Delivery: 1-2 business days</h5>
+                                                                                                            </div>-->
                                                     </div>
-                                                    <div class="product-description">
-                                                        <h5>Description</h5>
-                                                        <p>${product.description}</p>
-                                                    </div>
-<!--                                                    <div class="product-delivery-info">
-                                                        <h5>Delivery: 1-2 business days</h5>
-                                                    </div>-->
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+
                                 </div>
-
-
                             </div>
-                        </div>
+                        </form>
                         <%@include file="common/aside.jsp" %>
                     </div>        
                 </div>

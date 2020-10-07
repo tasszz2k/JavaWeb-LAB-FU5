@@ -16,8 +16,8 @@
 
         <script type="text/javascript" async="" src="${ctx}/template/analytics.js"></script>
         <script async="" src="${ctx}/template/gtm.js"></script>
-        <script type="text/javascript" src="${ctx}/template/FrontendAppLocalePage.aspx"></script>
-        <script type="text/javascript" src="${ctx}/template/frontendApp.min.js"></script>
+        <!--<script type="text/javascript" src="${ctx}/template/FrontendAppLocalePage.aspx"></script>-->
+        <!--<script type="text/javascript" src="${ctx}/template/frontendApp.min.js"></script>-->
     </head>
     <body data-pid="423612434" data-iid="">
 
@@ -51,32 +51,34 @@
                                                 <button type="button" class="close">×</button>
                                             </div>
                                             <p>Write your message here. Fill out the form:</p>
-                                            <form>
+                                            <form action="contact" method="post">
                                                 <fieldset>
                                                     <div class="row-fluid">
                                                         <div class="span6">
-                                                            <input type="text" name="author[name]" placeholder="Write your name here">
+                                                            <input type="text" name="name" placeholder="Write your name here">
                                                             <span class="help-block"></span>
                                                         </div>
                                                         <div class="span6">
-                                                            <input type="text" name="author[email]" placeholder="Write your email here">
+                                                            <input type="text" name="email" placeholder="Write your email here">
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
                                                     <div class="row-fluid">
                                                         <div class="span12">
-                                                            <textarea name="text" placeholder="Write your message here"></textarea>
+                                                            <textarea name="content" placeholder="Write your message here"></textarea>
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
                                                     <div id="recaptcha" class="row-fluid"></div>       
                                                     <div class="row-fluid">
                                                         <div class="span12">
-                                                            <button class="btn btn-primary pull-right" type="submit" data-default="Send - Click here" data-progress="&lt;i class=&#39;icon-spin icon-spinner&#39;&gt;&lt;/i&gt; Sending" data-error="Error sending message" data-success="&lt;i class=&#39;icon-ok&#39;&gt;&lt;/i&gt; Sent">Send - Click here</button>
+                                                            <!--<button class="btn btn-primary pull-right" type="submit" data-default="Send - Click here" data-progress="&lt;i class=&#39;icon-spin icon-spinner&#39;&gt;&lt;/i&gt; Sending" data-error="Error sending message" data-success="&lt;i class=&#39;icon-ok&#39;&gt;&lt;/i&gt; Sent">Send - Click here</button>-->
+                                                            <input class="btn btn-primary pull-right" type="submit" data-default="Send - Click here" value="Send - Click here"/>
                                                         </div>
                                                     </div>
                                                 </fieldset>
-                                            </form></div></div>
+                                            </form>
+                                        </div></div>
                                 </div>
 
 

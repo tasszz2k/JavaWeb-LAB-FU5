@@ -29,7 +29,7 @@
                     <div class="row-fluid content-inner">
                         <div id="left" class="span12"><div class="wrapper shop shop-basket"><div class="controls shop-basket-top-buttons">
                                     <a class="btn" href="store">Buy more</a>
-                                    <button name="checkout" class="btn" type="button">Checkout</button></div>
+                                    <button name="checkout" class="btn" type="button"  onclick="location.href='checkout'">Checkout</button></div>
                                 <div class="shop-basket-title heading">
                                     <h2 class="page-title pull-left">Your Basket</h2>
                                 </div>
@@ -48,11 +48,12 @@
                                                 </thead>
                                                 <tbody>
                                                     <c:forEach var="orderProduct" items="${sessionScope.order.listOrders}">
+                                                        
                                                         <tr>
                                                             <td class="shop-basket-product">
 
                                                                 <a href="${orderProduct.product.image}" class="shop-basket-product-image">
-                                                                    <img src="${ctx}/template/i285978589337768905._rsw480h480_szw480h480_.jpg">
+                                                                    <img src="${ctx}/template/${orderProduct.product.image}">
                                                                 </a>
 
                                                                 <h4 class="shop-basket-product-title"><a href="detail?id=${orderProduct.product.id}}">${orderProduct.product.name}</a></h4>
@@ -66,7 +67,7 @@
                                                             <td class="shop-basket-quantity">
 
                                                                 <i class="icon-spinner icon-spin hide"></i>
-                                                                <input type="text" class="shop-quantity" value="${orderProduct.quantity}">
+                                                                <input type="text" class="shop-quantity"  class="quantity" value="${orderProduct.quantity}">
 
                                                             </td>
                                                             <td class="shop-basket-total">
@@ -74,7 +75,8 @@
                                                             </td>
 
                                                             <td class="shop-basket-actions">
-                                                                <button class="btn btn-remove" type="button">
+                                                                
+                                                                <button class="btn btn-remove" type="button" onclick="location.href='basket?productId=${orderProduct.product.id}&action=delete'">
                                                                     <i class="icon-remove"></i>
                                                                 </button>
                                                             </td>
@@ -119,12 +121,25 @@
             <!-- this is the Footer content -->
         </div>
 
-        <input type="hidden" id="anti-forgery-token" value="vFZIp11QDd7w1cZjYdzwVVw3rTHgQi1lpMMqomvLq/qGfx85dADIn6rd+jb5+yvdIjnIKNejlFu6vxL7J8Np5frS12kUp0fuvjhwn7Fmjz//Mfz9CakPqshScHwQrowz6oAtqIwCkd0B9vZo8QzFu08gZAEZ5jelNH06z1PTN0ebVMJc52S3SBCP/OLAD+ZCCTjA9FTexxDg97UVUgobK+ziHkBS+I+J8Py03771PlDu65b5qTKtXSaOL3knZj9V4sMtNCBcfpOI+rwrpTMFnoFCfc0PZagMUVkAL3Ky3ET4oWPmqa3KPG7OoYtsdhJor/2XO6cMRlmIo37ou8BjlOuAA8EAkIIyp2TRAJEm76csV1dWtNnb3locxL+bTgQ9v1vLPL+gOMv7cH/DowtqmxB6Tjdre5Tpw5pSbk7xy+EIFQPudnp0g1gv5N4R3c7UICaO4x+GDDSPTQLSFw8BJg==">
 
 
         <!-- Remove after blog exp concludes -->
 
 
         <script type="text/javascript" src="${ctx}/template/frontendApp.min.js.download"></script>
+        <script>
+            window.addEventListener('load', function() {
+                var quantity = document.querySelectorAll('.shop-quantity');
+            console.log(quantity);
+            for (var i = 0; i < quantity.length; i++) {
+                quantity[i].onchange = function(e) {
+//               location.href=;
+                    console.log('basket?productId=${orderProduct.product.id}&action=update&quantity='+quantity[i].value)
+                }
+            }
+            })
+            
+
+        </script>
     </body>
 </html>

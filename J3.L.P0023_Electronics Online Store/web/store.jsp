@@ -58,7 +58,7 @@
                                                             </div>
                                                             <div class="product-button">
                                                                 <button name="product" data-product_id="1799399" data-hassizes="False" class="btn " type="button"
-                                                                        onclick="location.href='basket?productId=${product.id}'">
+                                                                        onclick="location.href='basket?productId=${product.id}&quantity=1&action=add'">
                                                                    Add to basket
                                                                 </button>
 

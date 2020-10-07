@@ -10,6 +10,7 @@ package model;
  * @author TASS
  */
 public class CustomerModel {
+
     private int id;
     private String name;
     private String company;
@@ -26,8 +27,8 @@ public class CustomerModel {
     public CustomerModel() {
     }
 
-    public CustomerModel(int id, String name, String company, String address1, String address2, String zip, String city, String state, String country, String phone, String email, String comment) {
-        this.id = id;
+    public CustomerModel(String name, String company, String address1, String address2, String zip, String city, String state, String country, String phone, String email, String comment) {
+
         this.name = name;
         this.company = company;
         this.address1 = address1;
@@ -136,6 +137,5 @@ public class CustomerModel {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
+
 }

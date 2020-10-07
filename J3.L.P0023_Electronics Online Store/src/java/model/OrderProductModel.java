@@ -19,10 +19,10 @@ public class OrderProductModel {
     public OrderProductModel() {
     }
 
-    public OrderProductModel(ProductModel product) {
+    public OrderProductModel(ProductModel product, int quantity) {
         this.product = product;
-        this.quantity = 1;
-        this.total = this.product.getPrice();
+        this.quantity = quantity;
+        this.total = this.product.getPrice() * quantity;
     }
 
     public int getId() {

@@ -88,25 +88,58 @@ public class OrderModel {
         this.totalItems = totalItems;
     }
 
-    public void addOrderProduct(ProductModel product) {
+    public void addOrderProduct(ProductModel product, int quantity) {
         boolean isExist = false;
         if (listOrders.size() == 0) {
-            listOrders.add(new OrderProductModel(product));
-            totalItems = 1;
+            listOrders.add(new OrderProductModel(product, quantity));
+            totalItems = quantity;
         } else {
             for (OrderProductModel orderProduct : listOrders) {
                 if (product.getId() == orderProduct.getProduct().getId()) {
-                    orderProduct.setQuantity(orderProduct.getQuantity() + 1);
-                    orderProduct.setTotal(orderProduct.getTotal() + product.getPrice());
+                    orderProduct.setQuantity(orderProduct.getQuantity() + quantity);
+                    orderProduct.setTotal(orderProduct.getTotal() + product.getPrice() * quantity);
                     isExist = true;
                 }
             }
             if (!isExist) {
-                listOrders.add(new OrderProductModel(product));
+                listOrders.add(new OrderProductModel(product, quantity));
             }
-            totalItems += 1;
+            totalItems += quantity;
         }
-        total += product.getPrice();
+        total += product.getPrice() * quantity;
+    }
+
+    public void deleteOrderProduct(ProductModel product) {
+        for (int i = 0; i < listOrders.size(); i++) {
+            if (product.getId() == listOrders.get(i).getProduct().getId()) {
+
+                totalItems -= listOrders.get(i).getQuantity();
+                total -= product.getPrice() * listOrders.get(i).getQuantity();
+                listOrders.remove(i);
+                i--;
+            }
+
+        }
+    }
+
+    public void updateOrderProduct(ProductModel product, int quantity) {
+        for (OrderProductModel orderProduct : listOrders) {
+            if (product.getId() == orderProduct.getProduct().getId()) {
+                totalItems += (quantity - orderProduct.getQuantity());
+                total += product.getPrice() * (quantity - orderProduct.getQuantity());
+                orderProduct.setQuantity(quantity);
+                orderProduct.setTotal(product.getPrice() * quantity);
+            }
+        }
+    }
+
+    public OrderProductModel getOrderProductByProductId(int productId) {
+        for (OrderProductModel orderProduct : listOrders) {
+            if (productId == orderProduct.getProduct().getId()) {
+                return orderProduct;
+            }
+        }
+        return null;
     }
 
 }

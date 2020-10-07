@@ -5,6 +5,8 @@
  */
 package controller;
 
+import dao.CheckoutDAO;
+import dao.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,6 +14,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.CustomerModel;
+import model.OrderModel;
+import model.ProductModel;
 
 /**
  *
@@ -77,7 +83,37 @@ public class CheckoutController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        HttpSession session = request.getSession(false);
+        OrderModel order;
+        if (session.getAttribute("order") == null) {
+            order = new OrderModel();
+        } else {
+            order = (OrderModel) session.getAttribute("order");
+        }
+
+        //Checkout
+        String name = request.getParameter("name");
+        String company = request.getParameter("company");
+        String address1 = request.getParameter("address1");
+        String address2 = request.getParameter("address2");
+        String zip = request.getParameter("zip");
+        String city = request.getParameter("city");
+        String state = request.getParameter("state");
+        String country = "United States";
+        String phone = request.getParameter("phone");
+        String email = request.getParameter("email");
+        String comment = request.getParameter("comment");
+
+        CustomerModel customerModel = new CustomerModel(name, company, address1, address2, zip, city, state, country, phone, email, comment);
+
+        CheckoutDAO checkoutDAO = new CheckoutDAO();
+
+        int orderId = checkoutDAO.checkout(customerModel, order);
+
+        if (orderId != -1) {
+            session.removeAttribute("order");
+        }
+        response.sendRedirect(request.getContextPath()+"/home");
     }
 
     /**

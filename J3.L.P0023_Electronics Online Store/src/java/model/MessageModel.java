@@ -19,8 +19,8 @@ public class MessageModel {
     public MessageModel() {
     }
 
-    public MessageModel(int id, String name, String email, String content) {
-        this.id = id;
+    public MessageModel( String name, String email, String content) {
+       
         this.name = name;
         this.email = email;
         this.content = content;

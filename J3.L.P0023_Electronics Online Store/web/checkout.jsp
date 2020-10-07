@@ -13,7 +13,7 @@
         <title>Home - #TASS</title>
 
         <link rel="stylesheet" type="text/css" href="${ctx}/template/10449703.design.v27526.css">
-
+        
         <script type="text/javascript" async="" src="${ctx}/template/analytics.js"></script>
         <script async="" src="${ctx}/template/gtm.js"></script>
         <script type="text/javascript" src="${ctx}/template/FrontendAppLocalePage.aspx"></script>
@@ -34,7 +34,7 @@
                                 <div class="alert alert-error hide">
                                     <button type="button" class="close">×</button>
                                 </div>
-                                <form class="content">
+                                <form class="content" action="checkout" method="post">
                                     <div class="section">
                                         <div class="heading">
                                             <h4>Shipping address</h4>
@@ -45,29 +45,29 @@
                                                 <div class="span6">
 
                                                     <label>Name *</label>
-                                                    <input type="text" name="shipping_address[name]" class="input-block-level">
+                                                    <input type="text" name="name" class="input-block-level">
                                                     <span class="help-block"></span>
 
                                                     <label>Company</label>
-                                                    <input type="text" name="shipping_address[company]" class="input-block-level">
+                                                    <input type="text" name="company" class="input-block-level">
 
                                                     <label>Address line 1 *</label>
-                                                    <input type="text" name="shipping_address[address_line_1]" class="input-block-level">
+                                                    <input type="text" name="address1" class="input-block-level">
                                                     <span class="help-block"></span>
 
                                                     <label>Address line 2</label>
-                                                    <input type="text" name="shipping_address[address_line_2]" class="input-block-level">
+                                                    <input type="text" name="address2" class="input-block-level">
                                                     <span class="help-block"></span>
 
                                                     <div class="row-fluid">
                                                         <div class="span6">
                                                             <label>Zip *</label>
-                                                            <input type="text" name="shipping_address[zip]" class="input-block-level">
+                                                            <input type="text" name="zip" class="input-block-level">
                                                             <span class="help-block"></span>
                                                         </div>
                                                         <div class="span6">
                                                             <label>City *</label>
-                                                            <input type="text" name="shipping_address[city]" class="input-block-level">
+                                                            <input type="text" name="city" class="input-block-level">
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
@@ -75,7 +75,7 @@
 
                                                         <div class="span6">
                                                             <label>State *</label>
-                                                            <select name="shipping_address[state]" class="input-block-level">
+                                                            <select name="state" class="input-block-level">
 
                                                                 <option value="AL">Alabama</option>
 
@@ -410,7 +410,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form></div></div>
+                                </form>
+                            </div></div>
                     </div>        
                 </div>
             </div>  <!-- the controller has determined which view to be shown in the content -->

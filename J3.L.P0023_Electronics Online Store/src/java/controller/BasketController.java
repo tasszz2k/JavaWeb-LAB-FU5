@@ -63,6 +63,8 @@ public class BasketController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //       try {
+        // Getting servlet request query string.
+
         HttpSession session = request.getSession(false);
         OrderModel order;
         int productId = -1;
@@ -80,9 +82,20 @@ public class BasketController extends HttpServlet {
             } else {
                 order = (OrderModel) session.getAttribute("order");
             }
-            order.addOrderProduct(product);
+
+            String action = request.getParameter("action");
+            if (action.equals("add")) {
+                int quantity = Integer.parseInt(request.getParameter("quantity"));
+                order.addOrderProduct(product, quantity);
+            } else if (action.equals("delete")) {
+                order.deleteOrderProduct(product);
+            }else if(action.equals("update")){
+                int quantity = Integer.parseInt(request.getParameter("quantity"));
+                order.updateOrderProduct(product, quantity);
+            }
+
             session.setAttribute("order", order);
-            
+
             //back to previous page
             String referer = request.getHeader("Referer");
             response.sendRedirect(referer);
