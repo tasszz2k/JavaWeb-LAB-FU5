@@ -56,7 +56,10 @@
                                                                     <img src="${ctx}/template/${orderProduct.product.image}">
                                                                 </a>
 
-                                                                <h4 class="shop-basket-product-title"><a href="detail?id=${orderProduct.product.id}}">${orderProduct.product.name}</a></h4>
+                                                                <h4 class="shop-basket-product-title">
+                                                                    <a href="detail?id=${orderProduct.product.id}">${orderProduct.product.name}</a>
+                                                                    <input type="hidden" class="id-product" value="${orderProduct.product.id}"/>
+                                                                </h4>
                                                                 <!--<p>Delivery: 1-2 business days</p>-->
 
 
@@ -67,8 +70,8 @@
                                                             <td class="shop-basket-quantity">
 
                                                                 <i class="icon-spinner icon-spin hide"></i>
-                                                                <input type="text" class="shop-quantity"  class="quantity" value="${orderProduct.quantity}">
-
+                                                                <input type="text" class="shop-quantity" value="${orderProduct.quantity}">
+                                                                
                                                             </td>
                                                             <td class="shop-basket-total">
                                                                 <p>${orderProduct.total} USD</p>
@@ -130,16 +133,18 @@
         <script>
             window.addEventListener('load', function() {
                 var quantity = document.querySelectorAll('.shop-quantity');
-            console.log(quantity);
+                var id = document.querySelectorAll('.id-product');
+//            console.log(quantity);
+//            console.log(id[0].value);
             for (var i = 0; i < quantity.length; i++) {
-                quantity[i].onchange = function(e) {
-//               location.href=;
-                    console.log('basket?productId=${orderProduct.product.id}&action=update&quantity='+quantity[i].value)
-                }
+                quantity[i].onchange = (function(i){
+                    return function() {
+                        location.href='basket?productId='+id[i].value+'&action=update&quantity='+quantity[i].value;
+                    console.log('basket?productId='+id[i].value+'&action=update&quantity='+quantity[i].value)
+                    }
+                }(i));
             }
-            })
-            
-
+            });
         </script>
     </body>
 </html>

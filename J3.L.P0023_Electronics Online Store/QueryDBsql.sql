@@ -121,3 +121,5 @@ INSERT INTO dbo.MESSAGE
 (NAME,EMAIL,CONTENT)
 VALUES
 ('TASS', 'tass@gmail.com','hello')
+
+SELECT * FROM dbo.MESSAGE
