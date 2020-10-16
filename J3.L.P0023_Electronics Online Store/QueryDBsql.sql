@@ -123,3 +123,4 @@ VALUES
 ('TASS', 'tass@gmail.com','hello')
 
 SELECT * FROM dbo.MESSAGE
+

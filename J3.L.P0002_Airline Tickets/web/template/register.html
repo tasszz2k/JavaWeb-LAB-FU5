@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img class="header-img" src="bg_top.jpg" />
+        <img class="logo" src="logo.png" />
+        <p>Fast, Freqent & Safe Flights</p>
+        <div class="login">
+            <a href="">
+                <img class="login-img" src="home.png" />
+                <br>
+                <label>Login</label>
+            </a>
+            <a href="">
+                <img class="login-img" src="register_t.png" />
+                <br>
+                <label>Register</label>
+            </a>
+        </div>
+
+        <div class="menu">
+            <a class="active" href="#">Home</a>
+            <a href="#">Book</a>
+            <a href="#">Manage Booking</a>
+
+        </div>
+
+    </header>
+    <div class="container">
+
+        <form class="login-form" method="post" action="">
+            <h2 style="color: red; ">Register</h2>
+            <h3 style="color: red; ">New_Account</h3>
+            <label>Email:</label>
+            <input type="email" name="email" />
+            <br><br><br>
+            <label>Password:</label>
+            <input type="password" name="password" />
+            <br><br>
+            <label>Verify_Password:</label>
+            <input type="password" name="rePassword" />
+            <br><br>
+            <h3 style="color: red; ">Contact_Information</h3>
+            <label>First_Name:</label>
+            <input type="text" name="firstName" />
+            <br><br>
+            <label>Last_Name:</label>
+            <input type="text" name="lastName" />
+            <br><br>
+            <label>Address:</label>
+            <input type="text" name="address" />
+            <br><br>
+            <label>Phone_number:</label>
+            <input type="text" name="phone" />
+            <br><br>
+            <label>Sex:</label>
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br><br>
+            <label>Age:</label>
+            <input type="text" name="age" />
+            <br><br>
+            <label>Card_number:</label>
+            <input type="text" name="card" />
+            <br><br>
+            <button type="submit" class="btn-blue">Register</button>
+            </button>
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img class="header-img" src="bg_top.jpg" />
+        <img class="logo" src="logo.png" />
+        <p>Fast, Freqent & Safe Flights</p>
+        <div class="login">
+            <a href="">
+                <img class="login-img" src="home.png" />
+                <br>
+                <label>Login</label>
+            </a>
+            <a href="">
+                <img class="login-img" src="register_t.png" />
+                <br>
+                <label>Register</label>
+            </a>
+        </div>
+
+        <div class="menu">
+            <a class="active" href="#">Home</a>
+            <a href="#">Book</a>
+            <a href="#">Manage Booking</a>
+
+        </div>
+
+    </header>
+    <div class="container">
+        <img class="bg-content" src="bg_top_img.jpg" />
+        <label>Flight</label>
+        <form class="form-search" method="" action="">
+            <div class="type-trip">
+                <input type="radio" name="typeTrip" value="" />
+                <label>Round trip</label>
+                <input type="radio" name="typeTrip" value="" />
+                <label>One way</label>
+            </div>
+            <div class="form-group">
+                <label>From</label>
+                <select name="from">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+                </br>
+                </br>
+                <label>To</label>
+                <select name="to">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+                </br>
+                </br>
+                <label>Departure</label>
+                <input type="date" name="departure" />
+                </br>
+                </br>
+                <label>Return</label>
+                <input type="date" name="return" />
+                </br>
+                </br>
+                <button type="submit" class="btn-blue">Search</button>
+            </div>
+
+
+        </form>
+
+    </div>
+</body>
+
+</html>

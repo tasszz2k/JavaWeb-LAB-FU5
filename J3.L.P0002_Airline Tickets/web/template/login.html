@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img class="header-img" src="bg_top.jpg" />
+        <img class="logo" src="logo.png" />
+        <p>Fast, Freqent & Safe Flights</p>
+        <div class="login">
+            <a href="">
+                <img class="login-img" src="home.png" />
+                <br>
+                <label>Login</label>
+            </a>
+            <a href="">
+                <img class="login-img" src="register_t.png" />
+                <br>
+                <label>Register</label>
+            </a>
+        </div>
+
+        <div class="menu">
+            <a class="active" href="#">Home</a>
+            <a href="#">Book</a>
+            <a href="#">Manage Booking</a>
+
+        </div>
+
+    </header>
+    <div class="container">
+
+        <form class="login-form" method="post" action="">
+            <h2 style="color: red; ">Login</h2>
+            <label>Email</label>
+            <input type="email" name="email" />
+            <br><br>
+            <label>Password</label>
+            <input type="password" name="password" />
+            <br><br>
+            <button type="submit" class="btn-blue">Login</button>
+            <button type="button" class="btn-blue" onclick="window.location.href='register'">Register</button>
+            </button>
+        </form>
+
+    </div>
+</body>
+
+</html>

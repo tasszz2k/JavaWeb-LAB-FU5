@@ -134,8 +134,6 @@
             window.addEventListener('load', function() {
                 var quantity = document.querySelectorAll('.shop-quantity');
                 var id = document.querySelectorAll('.id-product');
-//            console.log(quantity);
-//            console.log(id[0].value);
             for (var i = 0; i < quantity.length; i++) {
                 quantity[i].onchange = (function(i){
                     return function() {
