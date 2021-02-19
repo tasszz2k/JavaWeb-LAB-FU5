@@ -63,7 +63,7 @@ public class ArticleController extends HttpServlet {
             throws ServletException, IOException {
         try {
             String url = request.getRequestURI();
-            
+
             String view = "";
             ArticleModel article = null;
             int pageCounter = 0;
@@ -71,6 +71,7 @@ public class ArticleController extends HttpServlet {
             if (url.startsWith(request.getContextPath() + "/about")) {
                 article = articleDAO.findById(1);
                 view = "view/about.jsp";
+                request.setAttribute("currentMenu", "about");
             } else if (url.startsWith(request.getContextPath() + "/detail")) {
                 int id = Integer.parseInt(request.getParameter("id"));
                 article = articleDAO.findById(id);
@@ -81,8 +82,10 @@ public class ArticleController extends HttpServlet {
                 } else {
                     throw new Exception();
                 }
+                request.setAttribute("currentMenu", "blog");
+
             }
-            
+
             request.setAttribute("pageCounter", pageCounter);
             request.setAttribute("article", article);
             request.getRequestDispatcher(view).forward(request, response);

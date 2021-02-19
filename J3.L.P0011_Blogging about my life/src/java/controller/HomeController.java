@@ -76,7 +76,8 @@ public class HomeController extends HttpServlet {
             } else if (url.startsWith(request.getContextPath() + "/overview")) {
                 view = "view/overview.jsp";
             }
-            
+            request.setAttribute("currentMenu", "blog");
+
             request.getRequestDispatcher(view).forward(request, response);
         } catch (Exception ex) {
             request.getRequestDispatcher("common/error.jsp").forward(request, response);
